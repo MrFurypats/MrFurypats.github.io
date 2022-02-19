@@ -4,7 +4,9 @@
     <title>game in html</title> 
 </head>
  <body>
- <ul id="game">
+ 
+ <ul id="game"> </ul>
+ 
     <p align="center"> 
 	<!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
@@ -19,15 +21,23 @@
      with (processingInstance) {
         size(400, 400); 
         frameRate(60);
-        var saveCode = [0,0,6,6,1,0,0,true,true,true];
+       var saveCode = [0,0,6,6,10,0,0,true,true,true];
 
-var Color = [0,255,0];
+
+//If you want to change the colors of the skin go to the link and copy the numbers in the parentheses paist them into what you want to change.
+
+//https://docs.google.com/document/d/1QInw09wKesdKq7XRk3K2-axRsuuz1d8azXtKf0P5-NY/edit?usp=sharing
+
+var Color = [0,255,255];
 var skinColor = [233,150,122];
-var eyeColor = [255,255,255];
+var eyeColor = [0,0,0];
+
 
 var hide = true;
 if (hide === true) {
 if (hide === true) {
+
+frameRate(50);
 
 var bulletspeed = (0);
 var damage = (0);
@@ -441,14 +451,26 @@ my = mouseY;
 noStroke();
 fill(5, 234, 255);
 rect(0,0,400,400);
-if (saveCode[6] === 1) {
+if (saveCode[6] === 10) {
 bulletspeed = (40);    
 damage = (3);
-fireRate = (20);
+fireRate = (19);
 bloom = (20);
+shootType = (0);}
+if (saveCode[6] === 25) {
+bulletspeed = (50);    
+damage = (8);
+fireRate = (50);
+bloom = (40);
 shootType = (0);
 }
-
+if (saveCode[6] === 26) {
+bulletspeed = (50);    
+damage = (2);
+fireRate = (10);
+bloom = (50);
+shootType = (1);
+}
 fill(87, 87, 87);
 rect(x + 50, y + 50, 300, 300);
 //top wall
@@ -536,6 +558,7 @@ rect(x + 310 - 20,y +  330,30,30);
 rect(x + 330 - 20,y +  330,30,30);
 rect(x + 350 - 20,y +  330,30,30);
 rect(x + 370 - 20,y +  330,20,30);
+
 
 
 
@@ -947,14 +970,12 @@ fill(174, 255, 0);
 ellipse(bx9,by9,3,3);
 
 if (chestOpen === false && chest === true) {
-image(getImage("cute/ChestClosed"),(x + chestx) ,(y + chesty)-15,35,50);    
+// make chest closed    
 }
 
 if (chestOpen === true && chest === true) {
-image(getImage("cute/ChestOpen"),(x + chestx) ,(y + chesty)-15,35,50); 
-rotate(20);
-image(getImage("cute/ChestLid"),(x + chestx + 71) ,(y + chesty - 126)-15,35,50);    
-rotate(0);
+// make chest open
+// make chest lid
 }
 
  //character
@@ -976,7 +997,7 @@ ellipse(208,187,3,3);
 
 }
 
-if (saveCode[6] === 1) {
+if (saveCode[6] === 10) {
 noStroke();
 fill(0, 0, 0);
 textSize(15);
@@ -1001,7 +1022,67 @@ point(315,368);
 noStroke();
 fill(255, 0, 0);
 }
+if (saveCode[6] === 25) { 
 
+fill(0, 0, 0);
+text("Musket",313,337);
+noFill();
+stroke(43,43,43);
+strokeWeight(1.5);
+ellipse(321,354,8,8);
+noStroke();
+fill(43, 43, 43);
+rect(313,348,50,7);
+rect(319,345,5,3);
+rect(319,340,6,5);
+fill(139,69,19);
+quad(297,348,297,359,315,354,314,348);
+fill(105,105,105);
+rect(325,348,15,4);
+fill(255,0,0);
+rect(323,340,5,5);
+    
+}
+if (saveCode[6] === 26) {
+noStroke();
+fill(100,100,100);
+rect(344,357,6,30);
+stroke(0, 0, 0);
+strokeWeight(0.6);
+line(346.5,386,346.5,354);
+line(347,386,347,354);
+noStroke();
+fill(125,125,125);
+rect(342,354,10.2,19.8);
+fill(128,128,128);
+rect(317.2,344,24,12);
+rect(334,343.4,26.3,12.6);
+fill(148, 148, 148);
+rect(337,343,9.6,6);
+rect(325,339,6,6);
+fill(129, 129, 129);
+rect(360,343,5.4,18.6);
+stroke(105,105,105);
+strokeWeight(1.2);
+line(320,354,320,345);
+line(330,354,330,345);
+line(325,354,325,345);
+strokeWeight(1);
+line(346,361,351,361);
+line(346,363,351,363);
+line(346,365,351,365);
+line(346,367,351,367);
+noStroke();
+fill(100,100,100);
+rect(302,348.2,9,6);
+fill(110,110,110);
+rect(296,353,10.8,-3.6);
+fill(128,128,128);
+rect(311,345.8,6,9);  
+fill(0, 0, 0);
+textSize(13);
+text("Uzi", 321,333);
+}
 
 noFill();
 stroke(33, 161, 184);
@@ -1014,7 +1095,6 @@ ellipse(300,330,20,20);
 fill(0, 0, 0);
 textSize(16);
 text("R",294,336);
-
  fill(0, 0, 0);
 rect(0,0,165,72);
 strokeWeight(2);
@@ -1026,21 +1106,30 @@ rect(30,10,130/(saveCode[3]/saveCode[2]),19);
 fill(255, 255, 255);
 textSize(20);
 text(saveCode[2] + "/" + saveCode[3],68,26);
-fill(255,0,0);
-rect(10,5,20,30);
-fill(255,255,0);
-rect(10,35,20,25);
+
 fill(255, 255, 255);
 textSize(20);
 text(saveCode[1],35,60); 
+
+stroke(160, 168, 0);
+strokeWeight(2);
+noFill();
+ellipse(20,50,20,20);
+noStroke();
+fill(255, 255, 0);
+ellipse(20,50,20,20);
+fill(0, 0, 0);
+textSize(14);
+text("$",16,54);
+
+
 
 noStroke();
 fill(0, 0, 0);
 rect(370,0,30,30);
 fill(255, 255, 255);
 textSize(10);
-text("Save",373,12);
-text("code",373.8,23);
+text("Save",373,18);
  };
 }
 
