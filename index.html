@@ -10,9 +10,7 @@
     </p>
  </body>
  
- <!-- Run all the JavaScript stuff -->
- <!-- Include the processing.js library -->
- <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
@@ -20,23 +18,11 @@
      with (processingInstance) {
         size(400, 400); 
         frameRate(60);
-        
-        // ProgramCodeGoesHere
-     //Adding next : 3 new guns and working chest.
-//Will be added by: IDK
-
-//Paste savecode here ⬇
-var saveCode = [0,0,6,6,1,0,0,true,true,true];
-//If you want to change the colors of the skin go to the link and copy the numbers in the parentheses paist them into what you want to change.
-
-//https://docs.google.com/document/d/1QInw09wKesdKq7XRk3K2-axRsuuz1d8azXtKf0P5-NY/edit?usp=sharing
+        var saveCode = [0,0,6,6,1,0,0,true,true,true];
 
 var Color = [0,255,0];
 var skinColor = [233,150,122];
 var eyeColor = [255,255,255];
-
- 
-//If you have game ideas put them here : https://docs.google.com/presentation/d/1pjRAf-i0rhYtLCcR9s8mC7EG4enq3c7d3Ggm_tndkV8/edit?usp=sharing
 
 var hide = true;
 if (hide === true) {
@@ -406,21 +392,21 @@ keyPressed = function() {
     
    
    
-    if (keyIsPressed && keyCode === 87) {
+    if (keyCode === 87) {
   up = true;
 
 
  }
- if (keyIsPressed && keyCode === 83) {
+ if (keyCode === 83) {
      down = true;
 
  }
- if (keyIsPressed && keyCode === 65) {
+ if (keyCode === 65) {
      left = true; 
 
 
  }
- if (keyIsPressed && keyCode === 68) {
+ if (keyCode === 68) {
     right = true;
 
 
@@ -1052,15 +1038,15 @@ fill(0, 0, 0);
 rect(370,0,30,30);
 fill(255, 255, 255);
 textSize(10);
-text("Save",373,18);
+text("Save",373,12);
+text("code",373.8,23);
  };
 }
 
     }};
 
-    // Get the canvas that Processing-js will use
+ 
     var canvas = document.getElementById("mycanvas"); 
-    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
     var processingInstance = new Processing(canvas, sketchProc); 
  </script>
 
