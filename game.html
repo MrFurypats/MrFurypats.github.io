@@ -2,18 +2,23 @@
 <html> 
  <head>
     <title>game in html</title> 
+  
+<style> 
+
+.ver {
+color: rgb(135, 135, 135);
+}
+</style>    
 </head>
  <body>
  
  <ul id="game"> </ul>
-<a href="https://mrfurypats.github.io/"> <---back </a>	 
-<br>
-<br>
  
     <p align="center"> 
 	<!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
+<p class="ver">____________V:7__________________________________________________________</p>
  </body>
  
 
@@ -24,12 +29,7 @@
      with (processingInstance) {
         size(400, 400); 
         frameRate(60);
-       var saveCode = [0,0,6,6,10,0,0,true,true,true];
-
-
-//If you want to change the colors of the skin go to the link and copy the numbers in the parentheses paist them into what you want to change.
-
-//https://docs.google.com/document/d/1QInw09wKesdKq7XRk3K2-axRsuuz1d8azXtKf0P5-NY/edit?usp=sharing
+      var saveCode = [0,0,6,6,10,0,0,true,true,true];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -1125,7 +1125,12 @@ fill(0, 0, 0);
 textSize(14);
 text("$",16,54);
 
-
+fill(255, 0, 0);
+ellipse(16,16,10,10);
+ellipse(25,16,10,10);
+rotate(0.785398);
+rect(24,-5,10,10);
+rotate(-0.785398);
 
 noStroke();
 fill(0, 0, 0);
