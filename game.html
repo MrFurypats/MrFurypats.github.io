@@ -19,7 +19,7 @@ color: rgb(135, 135, 135);
 	<!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
-<p class="ver">_______________________________________________________V:13_______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:14_______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -30,7 +30,10 @@ color: rgb(135, 135, 135);
      with (processingInstance) {
         size(400, 400); 
         frameRate(60);
-      var saveCode = [0,0,6,6,10,0,0,true,true,true];
+     
+
+
+ var saveCode = [0,0,6,6,10,0,0,0,true,true];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -137,6 +140,27 @@ var bx8 = (200);
 var by8 = (200);
 var bx9 = (200);
 var by9 = (200);
+var sx1 = (0);
+var sy1 = (0);
+var sx2 = (0);
+var sy2 = (0);
+var sx3 = (0);
+var sy3 = (0);
+var sx4 = (0);
+var sy4 = (0);
+var sx5 = (0);
+var sy5 = (0);
+var sx6 = (0);
+var sy6 = (0);
+var sx7 = (0);
+var sy7 = (0);
+var sx8 = (0);
+var sy8 = (0);
+var sx9 = (0);
+var sy9 = (0);
+
+
+
 var mx = (0);
 var my = (0);
 var fps = (0);
@@ -322,9 +346,6 @@ y1 = y1*(200/abs(y1)) + random(bloom1*-1,bloom1);
 fire9 = true;
 };
 mouseClicked = function () {
-if (saveCode[1] !== 10) {
-saveCode[1]++;
-}
 if (saveCode[6] !== 0)  {
 if(firerate > fireRate) {
 
@@ -386,6 +407,13 @@ if(mx > 370 && my < 30) {
 println("Copy this save code : " );
 println(saveCode);
 }
+if(mx > 370 && my > 30 && my < 60) {
+println("saving being added soon");   
+    
+    
+}
+
+
 };
 keyPressed = function() {
    
@@ -585,6 +613,11 @@ y = y - isyouspeed;
  x = x - isyouspeed;
  
  }
+ else {
+     
+     
+     
+     }
 
 if(firerate < fireRate + 1) {
 firerate++;
@@ -985,6 +1018,22 @@ if (chestOpen === true && chest === true) {
 // make chest lid
 }
 
+
+if (saveCode[7] === 0) { 
+fill(255, 255, 255);
+ellipse(x + 250,y + 250,35.5,35.5);
+noFill();
+strokeWeight(3);
+stroke(255, 0, 0);
+ellipse(x + 250, y + 250,35.5,35.5);
+ellipse(x + 250, y + 250,20.5,20.5);
+fill(255, 0, 0);
+noStroke();
+ellipse(x + 250, y + 250,5.5,5.5);    
+    
+    
+}
+
  //character
  if (character === 0) { 
     
@@ -1141,7 +1190,14 @@ fill(0, 0, 0);
 rect(370,0,30,30);
 fill(255, 255, 255);
 textSize(10);
-text("Save",373,18);
+text("Save ",374,18);
+
+noStroke();
+fill(0, 0, 0);
+rect(370,30,30,30);
+fill(255, 255, 255);
+textSize(9);
+text("uploud",372,48);
  };
 }
 
