@@ -25,16 +25,17 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:18_______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:19_______________________________________________________________________________________________________</p>
  </body>
  
 
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
- var saveCode = localStorage.getItem("saveCodeinstorage");
+
     var givesavecodeButton = document.getElementById("givesavecode");
     var givesavecodefromfile = function() {
+ var saveCode = localStorage.getItem("saveCodeinstorage");
       alert("Here is your save code " + saveCode);
     };
     givesavecodeButton.addEventListener("click", givesavecodefromfile);
