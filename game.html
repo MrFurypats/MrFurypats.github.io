@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:17_______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:18_______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -43,11 +43,10 @@ color: rgb(135, 135, 135);
     var askbuttonButton = document.getElementById("askbutton");
     var askforcode = function() {
     const saveCode = prompt('paist save code');
-    
+    localStorage.setItem("saveCodeinstorage", saveCode);
     };
     askbuttonButton.addEventListener("click", askforcode);
     
-    localStorage.setItem("saveCodeinstorage", saveCode);
  
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
