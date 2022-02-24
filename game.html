@@ -25,13 +25,30 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:16_______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:17_______________________________________________________________________________________________________</p>
  </body>
  
 
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
+ var saveCode = localStorage.getItem("saveCodeinstorage");
+    var givesavecodeButton = document.getElementById("givesavecode");
+    var givesavecodefromfile = function() {
+      alert("Here is your save code " + saveCode);
+    };
+    givesavecodeButton.addEventListener("click", givesavecodefromfile);
+   
+   
+    var askbuttonButton = document.getElementById("askbutton");
+    var askforcode = function() {
+    const saveCode = prompt('paist save code');
+    
+    };
+    askbuttonButton.addEventListener("click", askforcode);
+    
+    localStorage.setItem("saveCodeinstorage", saveCode);
+ 
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
