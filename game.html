@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:23______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:25______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -35,7 +35,7 @@ color: rgb(135, 135, 135);
 
     var givesavecodeButton = document.getElementById("givesavecode");
     var givesavecodefromfile = function() {
- var saveCode = localStorage.getItem("saveCodeinstorage");
+ var saveCodeinst = localStorage.getItem("saveCodeinstorage");
       alert("Here is your save code " + saveCode);
 const saveCodeforpj = prompt('paist save code');
     };
@@ -44,8 +44,8 @@ const saveCodeforpj = prompt('paist save code');
    
     var askbuttonButton = document.getElementById("askbutton");
     var askforcode = function() {
-    const saveCode = prompt('paist save code');
-    localStorage.setItem("saveCodeinstorage", saveCode);
+    const saveCodest = prompt('paist save code');
+    localStorage.setItem("saveCodeinstorage", saveCodest);
     };
     askbuttonButton.addEventListener("click", askforcode);
     
