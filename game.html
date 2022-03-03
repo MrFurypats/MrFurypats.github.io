@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:33______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:34______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -53,14 +53,17 @@ color: rgb(135, 135, 135);
      with (processingInstance) {
         size(400, 400); 
         frameRate(60);
-     
 
 
- var saveCode = [0,0,6,6,10,0,0,0,true,true];
+
+ var saveCode = [0,0,6,6,10,25,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
 var eyeColor = [0,0,0];
+
+var placeGunuzix = (-176);
+var placeGunuziy = (17);
 
 
 var hide = true;
@@ -75,6 +78,8 @@ var fireRate = (0);
 var firerate = (0);
 var bloom = (0);
 var shootType = (0);
+var rare = (1);
+
 
 var bulletspeed1 = (0);
 var damage1 = (0);
@@ -376,52 +381,70 @@ firerate = 0;
 if (fire8 === true && fire9 === false&& fire1 === true ) {
 x9 = mx-200;
 y9 = my-200;
+sx9 = x;
+sy9 = y;
 fire9();  
 }    
 if (fire7 === true && fire8 === false&& fire1 === true) {
 x8 = mx-200;
 y8 = my-200;
+sx8 = x;
+sy8 = y;
 fire8();
 }    
     
 if (fire6 === true && fire7 === false&& fire1 === true) {
 x7 = mx-200;
 y7 = my-200;
+sx7 = x;
+sy7 = y;
 fire7();
 }
 
 if (fire5 === true && fire6 === false&& fire1 === true) {
 x6 = mx-200;
 y6 = my-200;
+sx6 = x;
+sy6 = y;
 fire6c();
 }    
     
 if (fire4 === true && fire5 === false&& fire1 === true) {
 x5 = mx-200;
 y5 = my-200;
+sx5 = x;
+sy5 = y;
 fire5c();
 }
     
 if (fire3 === true && fire4 === false&& fire1 === true) {
 x4 = mx-200;
 y4 = my-200;
+sx4 = x;
+sy4 = y;
 fire4c();
 }
 
 if (fire2 === true && fire3 === false&& fire1 === true) {
 x3 = mx-200;
 y3 = my-200;
+sx3 = x;
+sy3 = y;
 fire3c();
 }    
     
 if (fire1 === true && fire2 === false) {
 x2 = mx-200;
 y2 = my-200;
+sx2 = x;
+sy2 = y;
 fire2c();
 }
 if (fire1 === false) {
 x1 = mx-200;
 y1 = my-200;
+sx1 = x;
+sy1 =  y;
 fire1c();
 }
 }
@@ -432,6 +455,8 @@ println(saveCode);
 }
 if(mx > 370 && my > 30 && my < 60) {
 println("saving being added soon");   
+    
+    
 }
 
 
@@ -512,13 +537,16 @@ bulletspeed = (40);
 damage = (3);
 fireRate = (19);
 bloom = (20);
-shootType = (0);}
+shootType = (0);
+rare = (1);
+}
 if (saveCode[6] === 25) {
 bulletspeed = (50);    
 damage = (8);
 fireRate = (50);
 bloom = (40);
 shootType = (0);
+rare = (1);
 }
 if (saveCode[6] === 26) {
 bulletspeed = (50);    
@@ -526,9 +554,13 @@ damage = (2);
 fireRate = (10);
 bloom = (50);
 shootType = (1);
+rare = (1);
 }
 fill(87, 87, 87);
 rect(x + 50, y + 50, 300, 300);
+rect(x + 157,y + 349, 93,136);
+rect(x + -100,y + 474,600,300);
+
 //top wall
 fill(100,100,100);
 rect(x + 50,y + 20,30,30);
@@ -603,11 +635,6 @@ rect(x + 90 - 20,y +  330,30,30);
 rect(x + 110 - 20,y +  330,30,30);
 rect(x + 130 - 20,y +  330,30,30);
 rect(x + 150 - 20,y +  330,30,30);
-rect(x + 170 - 20,y +  330,30,30);
-rect(x + 190 - 20,y +  330,30,30);
-rect(x + 210 - 20,y +  330,30,30);
-rect(x + 230 - 20,y +  330,30,30);
-rect(x + 250 - 20,y +  330,30,30);
 rect(x + 270 - 20,y +  330,30,30);
 rect(x + 290 - 20,y +  330,30,30);
 rect(x + 310 - 20,y +  330,30,30);
@@ -616,27 +643,85 @@ rect(x + 350 - 20,y +  330,30,30);
 rect(x + 370 - 20,y +  330,20,30);
 
 
+//hallway to store
+rect(x + 250,y + 360, 30,114);
+rect(x + 130,y + 360, 30,114);
+
+
+//store
+rect(x + 250,y + 454,269,30);
+rect(x + -109,y + 454,269,30);
+rect(x + -109,y + 454,30,341);
+rect(x + 492,y + 454,30,341);
+rect(x + -109,y + 769,631,30);
+
+
+
+
 
 
 //move
-if (up === true && u === true && y < 147) {
+if (up === true && u === true && y < 147 && y > -115) {
  y = y + isyouspeed;
+ 
+
  }
+ else {
+if (y > -303  && up === true && u === true && y < -114 && x > -34 && x < 25) {
+
+ y = y + isyouspeed + 2;
+ }
+if ( up === true && u === true && y < -302) {
+ y = y + isyouspeed + 2;
+}
+     
+     }
  if (down === true && d === true && y > -115) {
 y = y - isyouspeed;
  
  }
- if (left === true && l === true && x < 135) {
- 
+ else {
+if (y < -114  && down === true && d === true && y > -270 && x > -34 && x < 24) {
+y = y - isyouspeed - 2;
+}
+if (y < -269  && down === true && d === true && y > -550) {
+y = y - isyouspeed - 2;
+}
+     }
+ if (left === true && l === true ) {
+  
+ if ( y > -116 && x < 135 ) {
  x = x + isyouspeed;
  }
- if (right === true && r === true && x > -132) {
- x = x - isyouspeed;
- 
+      
+if (y < -115 && x < 20 && left === true && l === true && y > -300) {
+x = x + isyouspeed + 2;
+}
+ if (y < -299 && x < 264 && left === true && l === true ) { 
+   x = x + isyouspeed + 2;  
+ }
  }
  else {
      
      
+     }
+ if (right === true && r === true) {
+if ( y > -116 &&  x > -132) {
+ x = x - isyouspeed;
+}
+ if (y < -115 && x > -29 && right === true && r === true && y > -300) { 
+ x = x - isyouspeed - 2;   
+    
+}
+ if (y < -299 && x > -276 && right === true && r === true ) { 
+x = x - isyouspeed - 2;   
+ }
+
+
+ }
+ else {
+     
+
      
      }
 
@@ -644,7 +729,6 @@ if(firerate < fireRate + 1) {
 firerate++;
 
 }
- 
  
 if(fire1=== true) {
 bx1 = (bx1 + x1  / bulletspeed1) ;
@@ -657,6 +741,8 @@ bx1 = 200;
 by1 = 200;
 x1 = 0;
 y1 = 0;
+sx1 = 0;
+sy1 = 0;
 }
 if(bx1 > 400  &&fire1=== true) {
 fire1 = false;
@@ -664,6 +750,8 @@ bx1 = 200;
 by1 = 200;
 x1 = 0;
 y1 = 0;
+sx1 = 0;
+sy1 = 0;
 }
 if(by1 < 0 && fire1=== true) {
 fire1 = false;
@@ -671,6 +759,8 @@ bx1 = 200;
 by1 = 200;
 x1 = 0;
 y1 = 0;
+sx1 = 0;
+sy1 = 0;
 }
 if(by1 > 400 && fire1=== true) {
 fire1 = false;
@@ -678,8 +768,10 @@ bx1 = 200;
 by1 = 200;
 x1 = 0;
 y1 = 0;
+sx1 = 0;
+sy1 = 0;
 }
-
+if ( fire1 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx1,by1,13,13);
@@ -687,6 +779,12 @@ fill(255, 150, 0);
 ellipse(bx1,by1,8,8);
 fill(174, 255, 0);
 ellipse(bx1,by1,3,3);
+}
+else {
+bx1 = 200;
+by1 = 200;
+    
+}
 if(fire2=== true) {
 bx2 = bx2 + x2  / bulletspeed2;
 by2 = by2 + y2 / bulletspeed2;
@@ -698,6 +796,8 @@ bx2 = 200;
 by2 = 200;
 x2 = 0;
 y2 = 0;
+sx2 = 0;
+sy2 = 0;
 }
 if(bx2 > 400  &&fire2=== true) {
 fire2 = false;
@@ -705,6 +805,8 @@ bx2 = 200;
 by2 = 200;
 x2 = 0;
 y2 = 0;
+sx2 = 0;
+sy2 = 0;
 }
 if(by2 < 0 && fire2=== true) {
 fire2 = false;
@@ -712,6 +814,8 @@ bx2 = 200;
 by2 = 200;
 x2 = 0;
 y2 = 0;
+sx2 = 0;
+sy2 = 0;
 }
 if(by2 > 400 && fire2=== true) {
 fire2 = false;
@@ -719,8 +823,10 @@ bx2 = 200;
 by2 = 200;
 x2 = 0;
 y2 = 0;
+sx2 = 0;
+sy2 = 0;
 }
-
+if ( fire2 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx2,by2,13,13);
@@ -728,6 +834,13 @@ fill(255, 150, 0);
 ellipse(bx2,by2,8,8);
 fill(174, 255, 0);
 ellipse(bx2,by2,3,3);
+}
+else {
+bx2 = 200;
+by2 = 200;
+    
+}
+
 
 if(fire3=== true) {
 bx3 = bx3 + x3  / bulletspeed3;
@@ -740,6 +853,8 @@ bx3 = 200;
 by3 = 200;
 x3 = 0;
 y3 = 0;
+sx3 = 0;
+sy3 = 0;
 }
 if(bx3 > 400  &&fire3=== true) {
 fire3 = false;
@@ -747,6 +862,8 @@ bx3 = 200;
 by3 = 200;
 x3 = 0;
 y3 = 0;
+sx3 = 0;
+sy3 = 0;
 }
 if(by3 < 0 && fire3=== true) {
 fire3 = false;
@@ -754,6 +871,8 @@ bx3 = 200;
 by3 = 200;
 x3 = 0;
 y3 = 0;
+sx3 = 0;
+sy3 = 0;
 }
 if(by3 > 400 && fire3=== true) {
 fire3 = false;
@@ -761,8 +880,10 @@ bx3 = 200;
 by3 = 200;
 x3 = 0;
 y3 = 0;
+sx3 = 0;
+sy3 = 0;
 }
-
+if ( fire3 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx3,by3,13,13);
@@ -770,7 +891,12 @@ fill(255, 150, 0);
 ellipse(bx3,by3,8,8);
 fill(174, 255, 0);
 ellipse(bx3,by3,3,3);
-
+}
+else {
+bx3 = 200;
+by3 = 200;
+    
+}
 
 if(fire4=== true) {
 bx4 = bx4 + x4  / bulletspeed4;
@@ -783,6 +909,8 @@ bx4 = 200;
 by4 = 200;
 x4 = 0;
 y4 = 0;
+sx4 = 0;
+sy4 = 0;
 }
 if(bx4 > 400  &&fire4=== true) {
 fire4 = false;
@@ -790,6 +918,8 @@ bx4 = 200;
 by4 = 200;
 x4 = 0;
 y4 = 0;
+sx4 = 0;
+sy4 = 0;
 }
 if(by4 < 0 && fire4=== true) {
 fire4 = false;
@@ -797,6 +927,8 @@ bx4 = 200;
 by4 = 200;
 x4 = 0;
 y4 = 0;
+sx4 = 0;
+sy4 = 0;
 }
 if(by4 > 400 && fire4=== true) {
 fire4 = false;
@@ -804,8 +936,11 @@ bx4 = 200;
 by4 = 200;
 x4 = 0;
 y4 = 0;
+sx4 = 0;
+sy4 = 0;
 }
 
+if ( fire4 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx4,by4,13,13);
@@ -813,7 +948,12 @@ fill(255, 150, 0);
 ellipse(bx4,by4,8,8);
 fill(174, 255, 0);
 ellipse(bx4,by4,3,3);
-
+}
+else {
+bx4 = 200;
+by4 = 200;
+    
+}
 if(fire5=== true) {
 bx5 = bx5 + x5  / bulletspeed5;
 by5 = by5 + y5 / bulletspeed5;
@@ -825,6 +965,8 @@ bx5 = 200;
 by5 = 200;
 x5 = 0;
 y5 = 0;
+sx5 = 0;
+sy5 = 0;
 }
 if(bx5 > 400  &&fire5=== true) {
 fire5 = false;
@@ -832,6 +974,8 @@ bx5 = 200;
 by5 = 200;
 x5 = 0;
 y5 = 0;
+sx5 = 0;
+sy5 = 0;
 }
 if(by5 < 0 && fire5=== true) {
 fire5 = false;
@@ -839,6 +983,8 @@ bx5 = 200;
 by5 = 200;
 x5 = 0;
 y5 = 0;
+sx5 = 0;
+sy5 = 0;
 }
 if(by5 > 400 && fire5=== true) {
 fire5 = false;
@@ -846,8 +992,10 @@ bx5 = 200;
 by5 = 200;
 x5 = 0;
 y5 = 0;
+sx5 = 0;
+sy5 = 0;
 }
-
+if ( fire5 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx5,by5,13,13);
@@ -855,7 +1003,12 @@ fill(255, 150, 0);
 ellipse(bx5,by5,8,8);
 fill(174, 255, 0);
 ellipse(bx5,by5,3,3);
-
+}
+else {
+bx5 = 200;
+by5 = 200;
+    
+}
 if(fire6=== true) {
 bx6 = bx6 + x6  / bulletspeed6;
 by6 = by6 + y6 / bulletspeed6;
@@ -867,6 +1020,8 @@ bx6 = 200;
 by6 = 200;
 x6 = 0;
 y6 = 0;
+sx6 = 0;
+sy6 = 0;
 }
 if(bx6 > 400  &&fire6=== true) {
 fire6 = false;
@@ -874,6 +1029,8 @@ bx6 = 200;
 by6 = 200;
 x6 = 0;
 y6 = 0;
+sx6 = 0;
+sy6 = 0;
 }
 if(by6 < 0 && fire6=== true) {
 fire6 = false;
@@ -881,6 +1038,8 @@ bx6 = 200;
 by6 = 200;
 x6 = 0;
 y6 = 0;
+sx6 = 0;
+sy6 = 0;
 }
 if(by6 > 400 && fire6=== true) {
 fire6 = false;
@@ -888,8 +1047,10 @@ bx6 = 200;
 by6 = 200;
 x6 = 0;
 y6 = 0;
+sx6 = 0;
+sy6 = 0;
 }
-
+if ( fire6 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx6,by6,13,13);
@@ -897,7 +1058,12 @@ fill(255, 150, 0);
 ellipse(bx6,by6,8,8);
 fill(174, 255, 0);
 ellipse(bx6,by6,3,3);
-
+}
+else {
+bx6 = 200;
+by6 = 200;
+    
+}
 
 if(fire7=== true) {
 bx7 = bx7 + x7  / bulletspeed7;
@@ -910,6 +1076,8 @@ bx7 = 200;
 by7 = 200;
 x7 = 0;
 y7 = 0;
+sx7 = 0;
+sy7 = 0;
 }
 if(bx7 > 400  &&fire7=== true) {
 fire7 = false;
@@ -917,6 +1085,8 @@ bx7 = 200;
 by7 = 200;
 x7 = 0;
 y7 = 0;
+sx7 = 0;
+sy7 = 0;
 }
 if(by7 < 0 && fire7=== true) {
 fire7 = false;
@@ -924,6 +1094,8 @@ bx7 = 200;
 by7 = 200;
 x7 = 0;
 y7 = 0;
+sx7 = 0;
+sy7 = 0;
 }
 if(by7 > 400 && fire7=== true) {
 fire7 = false;
@@ -931,8 +1103,10 @@ bx7 = 200;
 by7 = 200;
 x7 = 0;
 y7 = 0;
+sx7 = 0;
+sy7 = 0;
 }
-
+if ( fire7 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx7,by7,13,13);
@@ -940,7 +1114,12 @@ fill(255, 150, 0);
 ellipse(bx7,by7,8,8);
 fill(174, 255, 0);
 ellipse(bx7,by7,3,3);
-
+}
+else {
+bx7 = 200;
+by7 = 200;
+    
+}
 
 if(fire8=== true) {
 bx8 = bx8 + x8  / bulletspeed8;
@@ -953,6 +1132,8 @@ bx8 = 200;
 by8 = 200;
 x8 = 0;
 y8 = 0;
+sx8 = 0;
+sy8 = 0;
 }
 if(bx8 > 400  &&fire8=== true) {
 fire8 = false;
@@ -960,6 +1141,8 @@ bx8 = 200;
 by8 = 200;
 x8 = 0;
 y8 = 0;
+sx8 = 0;
+sy8 = 0;
 }
 if(by8 < 0 && fire8=== true) {
 fire8 = false;
@@ -967,6 +1150,8 @@ bx8 = 200;
 by8 = 200;
 x8 = 0;
 y8 = 0;
+sx8 = 0;
+sy8 = 0;
 }
 if(by8 > 400 && fire8=== true) {
 fire8 = false;
@@ -974,8 +1159,10 @@ bx8 = 200;
 by8 = 200;
 x8 = 0;
 y8 = 0;
+sx8 = 0;
+sy8 = 0;
 }
-
+if ( fire8 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx8,by8,13,13);
@@ -983,7 +1170,12 @@ fill(255, 150, 0);
 ellipse(bx8,by8,8,8);
 fill(174, 255, 0);
 ellipse(bx8,by8,3,3);
-
+}
+else {
+bx8 = 200;
+by8 = 200;
+    
+}
 
 if(fire9=== true) {
 bx9 = bx9 + x9  / bulletspeed9;
@@ -996,6 +1188,8 @@ bx9 = 200;
 by9 = 200;
 x9 = 0;
 y9 = 0;
+sx9 = 0;
+sy9 = 0;
 }
 if(bx9 > 400  &&fire9=== true) {
 fire9 = false;
@@ -1003,6 +1197,8 @@ bx9 = 200;
 by9 = 200;
 x9 = 0;
 y9 = 0;
+sx9 = 0;
+sy9 = 0;
 }
 if(by9 < 0 && fire9=== true) {
 fire9 = false;
@@ -1010,6 +1206,8 @@ bx9 = 200;
 by9 = 200;
 x9 = 0;
 y9 = 0;
+sx9 = 0;
+sy9 = 0;
 }
 if(by9 > 400 && fire9=== true) {
 fire9 = false;
@@ -1017,8 +1215,10 @@ bx9 = 200;
 by9 = 200;
 x9 = 0;
 y9 = 0;
+sx9 = 0;
+sy9 = 0;
 }
-
+if ( fire9 === true) {
 noStroke();
 fill(255, 0, 0);
 ellipse(bx9,by9,13,13);
@@ -1026,7 +1226,12 @@ fill(255, 150, 0);
 ellipse(bx9,by9,8,8);
 fill(174, 255, 0);
 ellipse(bx9,by9,3,3);
-
+}
+else {
+bx9 = 200;
+by9 = 200;
+    
+}
 if (chestOpen === false && chest === true) {
 // make chest closed    
 }
@@ -1071,6 +1276,27 @@ ellipse(208,187,3,3);
 
 }
 
+ 
+if( rare === 1) {
+fill(201,201,201);    
+    
+}
+
+if( rare === 2 ) {
+fill(0, 255, 0);
+}
+
+stroke(33, 161, 184);
+strokeWeight(3);
+ellipse(330,355,75,75);
+strokeWeight(1);
+stroke(0, 0, 0);
+fill(255, 255, 255);
+ellipse(300,330,20,20);
+fill(0, 0, 0);
+textSize(16);
+text("R",294,336);
+
 if (saveCode[6] === 10) {
 noStroke();
 fill(0, 0, 0);
@@ -1099,7 +1325,8 @@ fill(255, 0, 0);
 if (saveCode[6] === 25) { 
 
 fill(0, 0, 0);
-text("Musket",313,337);
+textSize(13);
+text("Musket",311,337);
 noFill();
 stroke(43,43,43);
 strokeWeight(1.5);
@@ -1158,17 +1385,6 @@ textSize(13);
 text("Uzi", 321,333);
 }
 
-noFill();
-stroke(33, 161, 184);
-strokeWeight(3);
-ellipse(330,355,75,75);
-strokeWeight(1);
-stroke(0, 0, 0);
-fill(255, 255, 255);
-ellipse(300,330,20,20);
-fill(0, 0, 0);
-textSize(16);
-text("R",294,336);
  fill(0, 0, 0);
 rect(0,0,165,72);
 strokeWeight(2);
@@ -1216,6 +1432,7 @@ rect(370,30,30,30);
 fill(255, 255, 255);
 textSize(9);
 text("uploud",372,48);
+
  };
 }
 
