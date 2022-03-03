@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:34______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:33______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -65,6 +65,23 @@ var eyeColor = [0,0,0];
 var placeGunuzix = (-176);
 var placeGunuziy = (17);
 
+var tablex = (-107);
+var tabley = (251);
+
+var tablex1 = (221);
+var tabley1 = (251);
+
+var tablex2 = (-107);
+var tabley2 = (341);
+
+var tablex3 = (221);
+var tabley3 = (341);
+
+var tablex4 = (-107);
+var tabley4 = (431);
+
+var tablex5 = (221);
+var tabley5 = (431);
 
 var hide = true;
 if (hide === true) {
@@ -656,9 +673,58 @@ rect(x + 492,y + 454,30,341);
 rect(x + -109,y + 769,631,30);
 
 
+stroke(0, 0, 0);
+fill(201,201,201);
+rect(x + tablex + 39,y + tabley + 243,10,50);
+rect(x + tablex + 265 - 12,y + tabley + 243,10,50);
+rect(x + tablex + 260 - 12,y + tabley + 259,10,50);
+rect(x + tablex + 32,y + tabley + 259,10,50);
+rect(x + tablex + 30,y + tabley + 232,238,39);
+
+stroke(0, 0, 0);
+fill(0,255,0);
+rect(x + tablex1 + 39,y + tabley1 + 243,10,50);
+rect(x + tablex1 + 265 - 12,y + tabley1 + 243,10,50);
+rect(x + tablex1 + 260 - 12,y + tabley1 + 259,10,50);
+rect(x + tablex1 + 32,y + tabley1 + 259,10,50);
+rect(x + tablex1 + 30,y + tabley1 + 232,238,39);
+
+stroke(0, 0, 0);
+fill(0,0,255);
+rect(x + tablex2 + 39,y + tabley2 + 243,10,50);
+rect(x + tablex2 + 265 - 12,y + tabley2 + 243,10,50);
+rect(x + tablex2 + 260 - 12,y + tabley2 + 259,10,50);
+rect(x + tablex2 + 32,y + tabley2 + 259,10,50);
+rect(x + tablex2 + 30,y + tabley2 + 232,238,39);
 
 
+stroke(0, 0, 0);
+fill(255,0,255);
+rect(x + tablex3 + 39,y + tabley3 + 243,10,50);
+rect(x + tablex3 + 265 - 12,y + tabley3 + 243,10,50);
+rect(x + tablex3 + 260 - 12,y + tabley3 + 259,10,50);
+rect(x + tablex3 + 32,y + tabley3 + 259,10,50);
+rect(x + tablex3 + 30,y + tabley3 + 232,238,39);
 
+stroke(0, 0, 0);
+fill(255,215,0);
+rect(x + tablex4 + 39,y + tabley4 + 243,10,50);
+rect(x + tablex4 + 265 - 12,y + tabley4 + 243,10,50);
+rect(x + tablex4 + 260 - 12,y + tabley4 + 259,10,50);
+rect(x + tablex4 + 32,y + tabley4 + 259,10,50);
+rect(x + tablex4 + 30,y + tabley4 + 232,238,39);
+
+stroke(0, 0, 0);
+fill(250, 35, 35);
+rect(x + tablex5 + 39,y + tabley5 + 243,10,50);
+rect(x + tablex5 + 265 - 12,y + tabley5 + 243,10,50);
+rect(x + tablex5 + 260 - 12,y + tabley5 + 259,10,50);
+rect(x + tablex5 + 32,y + tabley5 + 259,10,50);
+rect(x + tablex5 + 30,y + tabley5 + 232,238,39);
+
+stroke(0, 0, 0);
+fill(255, 255, 255);
+rect(x + -77, y + 730, 569,39);
 
 //move
 if (up === true && u === true && y < 147 && y > -115) {
@@ -669,10 +735,10 @@ if (up === true && u === true && y < 147 && y > -115) {
  else {
 if (y > -303  && up === true && u === true && y < -114 && x > -34 && x < 25) {
 
- y = y + isyouspeed + 2;
+ y = y + isyouspeed + 1;
  }
 if ( up === true && u === true && y < -302) {
- y = y + isyouspeed + 2;
+ y = y + isyouspeed + 1;
 }
      
      }
@@ -681,11 +747,11 @@ y = y - isyouspeed;
  
  }
  else {
-if (y < -114  && down === true && d === true && y > -270 && x > -34 && x < 24) {
-y = y - isyouspeed - 2;
+if (y < -114  && down === true && d === true && y > -270 && x > -34 && x < 25) {
+y = y - isyouspeed - 1;
 }
 if (y < -269  && down === true && d === true && y > -550) {
-y = y - isyouspeed - 2;
+y = y - isyouspeed - 1;
 }
      }
  if (left === true && l === true ) {
@@ -695,10 +761,10 @@ y = y - isyouspeed - 2;
  }
       
 if (y < -115 && x < 20 && left === true && l === true && y > -300) {
-x = x + isyouspeed + 2;
+x = x + isyouspeed + 1;
 }
  if (y < -299 && x < 264 && left === true && l === true ) { 
-   x = x + isyouspeed + 2;  
+   x = x + isyouspeed + 1;  
  }
  }
  else {
@@ -710,11 +776,11 @@ if ( y > -116 &&  x > -132) {
  x = x - isyouspeed;
 }
  if (y < -115 && x > -29 && right === true && r === true && y > -300) { 
- x = x - isyouspeed - 2;   
+ x = x - isyouspeed - 1;   
     
 }
  if (y < -299 && x > -276 && right === true && r === true ) { 
-x = x - isyouspeed - 2;   
+x = x - isyouspeed - 1;   
  }
 
 
