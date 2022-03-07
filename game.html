@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:33______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:36______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -87,7 +87,7 @@ var hide = true;
 if (hide === true) {
 if (hide === true) {
 
-frameRate(50);
+frameRate(60);
 
 var bulletspeed = (0);
 var damage = (0);
@@ -550,7 +550,7 @@ noStroke();
 fill(5, 234, 255);
 rect(0,0,400,400);
 if (saveCode[6] === 10) {
-bulletspeed = (40);    
+bulletspeed = (35);    
 damage = (3);
 fireRate = (19);
 bloom = (20);
@@ -558,7 +558,7 @@ shootType = (0);
 rare = (1);
 }
 if (saveCode[6] === 25) {
-bulletspeed = (50);    
+bulletspeed = (40);    
 damage = (8);
 fireRate = (50);
 bloom = (40);
@@ -566,7 +566,7 @@ shootType = (0);
 rare = (1);
 }
 if (saveCode[6] === 26) {
-bulletspeed = (50);    
+bulletspeed = (40);    
 damage = (2);
 fireRate = (10);
 bloom = (50);
@@ -840,11 +840,11 @@ sy1 = 0;
 if ( fire1 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx1,by1,13,13);
+ellipse(bx1 + x - sx1,by1 + y - sy1,13,13);
 fill(255, 150, 0);
-ellipse(bx1,by1,8,8);
+ellipse(bx1 + x - sx1,by1 + y - sy1,8,8);
 fill(174, 255, 0);
-ellipse(bx1,by1,3,3);
+ellipse(bx1 + x - sx1,by1 + y - sy1,3,3);
 }
 else {
 bx1 = 200;
@@ -895,11 +895,11 @@ sy2 = 0;
 if ( fire2 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx2,by2,13,13);
+ellipse(bx2 + x - sx2,by2 + y - sy2,13,13);
 fill(255, 150, 0);
-ellipse(bx2,by2,8,8);
+ellipse(bx2 + x - sx2,by2 + y - sy2,8,8);
 fill(174, 255, 0);
-ellipse(bx2,by2,3,3);
+ellipse(bx2 + x - sx2,by2 + y - sy2,3,3);
 }
 else {
 bx2 = 200;
@@ -952,11 +952,11 @@ sy3 = 0;
 if ( fire3 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx3,by3,13,13);
+ellipse(bx3 + x - sx3,by3 + y - sy3,13,13);
 fill(255, 150, 0);
-ellipse(bx3,by3,8,8);
+ellipse(bx3 + x - sx3,by3 + y - sy3,8,8);
 fill(174, 255, 0);
-ellipse(bx3,by3,3,3);
+ellipse(bx3 + x - sx3,by3 + y - sy3,3,3);
 }
 else {
 bx3 = 200;
@@ -1009,11 +1009,11 @@ sy4 = 0;
 if ( fire4 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx4,by4,13,13);
+ellipse(bx4 + x - sx4,by4 + y - sy4,13,13);
 fill(255, 150, 0);
-ellipse(bx4,by4,8,8);
+ellipse(bx4 + x - sx4,by4 + y - sy4,8,8);
 fill(174, 255, 0);
-ellipse(bx4,by4,3,3);
+ellipse(bx4 + x - sx4,by4 + y - sy4,3,3);
 }
 else {
 bx4 = 200;
@@ -1064,11 +1064,11 @@ sy5 = 0;
 if ( fire5 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx5,by5,13,13);
+ellipse(bx5 + x - sx5,by5 + y - sy5,13,13);
 fill(255, 150, 0);
-ellipse(bx5,by5,8,8);
+ellipse(bx5 + x - sx5,by5 + y - sy5,8,8);
 fill(174, 255, 0);
-ellipse(bx5,by5,3,3);
+ellipse(bx5 + x - sx5,by5 + y - sy5,3,3);
 }
 else {
 bx5 = 200;
@@ -1119,11 +1119,11 @@ sy6 = 0;
 if ( fire6 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx6,by6,13,13);
+ellipse(bx6 + x - sx6,by6 + y - sy6,13,13);
 fill(255, 150, 0);
-ellipse(bx6,by6,8,8);
+ellipse(bx6 + x - sx6,by6 + y - sy6,8,8);
 fill(174, 255, 0);
-ellipse(bx6,by6,3,3);
+ellipse(bx6 + x - sx6,by6 + y - sy6,3,3);
 }
 else {
 bx6 = 200;
@@ -1175,11 +1175,11 @@ sy7 = 0;
 if ( fire7 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx7,by7,13,13);
+ellipse(bx7 + x - sx7,by7 + y - sy7,13,13);
 fill(255, 150, 0);
-ellipse(bx7,by7,8,8);
+ellipse(bx7 + x - sx7,by7 + y - sy7,8,8);
 fill(174, 255, 0);
-ellipse(bx7,by7,3,3);
+ellipse(bx7 + x - sx7,by7 + y - sy7,3,3);
 }
 else {
 bx7 = 200;
@@ -1231,11 +1231,11 @@ sy8 = 0;
 if ( fire8 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx8,by8,13,13);
+ellipse(bx8 + x - sx8,by8 + y - sy8,13,13);
 fill(255, 150, 0);
-ellipse(bx8,by8,8,8);
+ellipse(bx8 + x - sx8,by8 + y - sy8,8,8);
 fill(174, 255, 0);
-ellipse(bx8,by8,3,3);
+ellipse(bx8 + x - sx8,by8 + y - sy8,3,3);
 }
 else {
 bx8 = 200;
@@ -1287,11 +1287,11 @@ sy9 = 0;
 if ( fire9 === true) {
 noStroke();
 fill(255, 0, 0);
-ellipse(bx9,by9,13,13);
+ellipse(bx9 + x - sx9,by9 + y - sy9,13,13);
 fill(255, 150, 0);
-ellipse(bx9,by9,8,8);
+ellipse(bx9 + x - sx9,by9 + y - sy9,8,8);
 fill(174, 255, 0);
-ellipse(bx9,by9,3,3);
+ellipse(bx9 + x - sx9,by9 + y - sy9,3,3);
 }
 else {
 bx9 = 200;
@@ -1308,7 +1308,7 @@ if (chestOpen === true && chest === true) {
 }
 
 
-if (saveCode[7] === 0) { 
+
 fill(255, 255, 255);
 ellipse(x + 250,y + 250,35.5,35.5);
 noFill();
@@ -1321,7 +1321,19 @@ noStroke();
 ellipse(x + 250, y + 250,5.5,5.5);    
     
     
-}
+
+
+
+fill(255, 255, 255);
+ellipse(x + 250,y + 250,35.5,35.5);
+noFill();
+strokeWeight(3);
+stroke(255, 0, 0);
+ellipse(x + 250,y + 250,35.5,35.5);
+ellipse(x + 250,y + 250,20.5,20.5);
+fill(255, 0, 0);
+noStroke();
+ellipse(x + 250,y + 250,5.5,5.5);
 
  //character
  if (character === 0) { 
@@ -1484,6 +1496,8 @@ ellipse(25,16,10,10);
 rotate(0.785398);
 rect(24,-5,10,10);
 rotate(-0.785398);
+
+
 
 noStroke();
 fill(0, 0, 0);
