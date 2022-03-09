@@ -2,10 +2,40 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>New webpage</title>
+        <title>calculate slope</title>
     </head>
     <body>
+ <ul id="slope-finder"> </ul>
+ <button id="askforpoints">Find slope with 2 points</button>
+<br>
+<br>
+<br>
+<p id="rise"> </p>
+<br> 
+<p id="run"> </p>
+<br>
+<p id="riseoverrun"> </p>
+<br>
+<p id="slope"> </p>
 
+<script>
+ var askbuttonButton = document.getElementById("askforpoints");
 
+    var askforcode = function() {
+    const x1 = prompt('what is the first x');
+    const y1 = prompt('what is the first y');
+    const x2 = prompt('what is the secound x');
+    const y2 = prompt('what is the secound y');
+    var rise = y2 - y1;
+    var run = x2 - x1;
+    var slope = (y2 - y1) / (x2 - x1);
+document.getElementById("rise").innerHTML = "rise = " + rise;
+document.getElementById("run").innerHTML = "run = " + run;
+document.getElementById("slope").innerHTML = "slope = " + slope;
+document.getElementById("riseoverrun").innerHTML = "rise over run = " + rise + "/" + run;
+    };
+    askbuttonButton.addEventListener("click", askforcode);
+    
+</script>
     </body>
 </html>
