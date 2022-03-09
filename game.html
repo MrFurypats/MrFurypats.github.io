@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:37______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:38______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -56,7 +56,9 @@ color: rgb(135, 135, 135);
 
 
 
- var saveCode = [0,0,6,6,10,25,0,true,true,0,0];
+
+
+ var saveCode = [0,0,6,6,25,0,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -65,27 +67,11 @@ var eyeColor = [0,0,0];
 var placeGunuzix = (-176);
 var placeGunuziy = (17);
 
-var tablex = (-107);
-var tabley = (251);
-
-var tablex1 = (221);
-var tabley1 = (251);
-
-var tablex2 = (-107);
-var tabley2 = (341);
-
-var tablex3 = (221);
-var tabley3 = (341);
-
-var tablex4 = (-107);
-var tabley4 = (431);
-
-var tablex5 = (221);
-var tabley5 = (431);
-
 var hide = true;
 if (hide === true) {
 if (hide === true) {
+
+frameRate(60);
 
 var bulletspeed = (0);
 var damage = (0);
@@ -208,7 +194,7 @@ var mx = (0);
 var my = (0);
 var fps = (0);
 var character = (0);
-var isyouspeed = (3);
+var isyouspeed = (4);
 var up = (false);
 var u = (true);
 var down = (false);
@@ -224,7 +210,10 @@ var fire1c = function () {
 bulletspeed1=bulletspeed;
 damage1=damage;
 bloom1=bloom;
-
+x1 = mx-200;
+y1 = my-200;
+sx1 = x;
+sy1 =  y;
 if(abs(x1) > abs(y1)) {
 y1 = y1*(200/abs(x1))+ random(bloom1*-1,bloom1);
 x1 = x1*(200/abs(x1))+ random(bloom1*-1,bloom1);
@@ -244,8 +233,11 @@ fire1 = true;
 var fire2c = function () {
 bulletspeed2=bulletspeed;
 damage2=damage;
-
 bloom2=bloom;
+x2 = mx-200;
+y2 = my-200;
+sx2 = x;
+sy2 = y;
 if(abs(x2) > abs(y2)) {
 y2 = y2*(200/abs(x2))+ random(bloom2*-1,bloom2);
 x2 = x2*(200/abs(x2))+ random(bloom2*-1,bloom2);
@@ -263,8 +255,11 @@ fire2 = true;
 var fire3c = function () {
 bulletspeed3=bulletspeed;
 damage3=damage;
-
 bloom3=bloom;
+x3 = mx-200;
+y3 = my-200;
+sx3 = x;
+sy3 = y;
 if(abs(x3) > abs(y3)) {
 y3 = y3*(200/abs(x3))+ random(bloom3*-1,bloom3);
 x3 = x3*(200/abs(x3))+ random(bloom3*-1,bloom3);
@@ -282,8 +277,11 @@ fire3 = true;
 var fire4c = function () {
 bulletspeed4=bulletspeed;
 damage4=damage;
-
 bloom4=bloom;
+x4 = mx-200;
+y4 = my-200;
+sx4 = x;
+sy4 = y;
 if(abs(x4) > abs(y4)) {
 y4 = y4*(200/abs(x4))+ random(bloom4*-1,bloom4);
 x4 = x4*(200/abs(x4))+ random(bloom4*-1,bloom4);
@@ -302,6 +300,10 @@ var fire5c = function () {
 bulletspeed5=bulletspeed;
 damage5=damage;
 bloom5=bloom;
+x5 = mx-200;
+y5 = my-200;
+sx5 = x;
+sy5 = y;
 if(abs(x5) > abs(y5)) {
 y5 = y5*(200/abs(x5))+ random(bloom5*-1,bloom5);
 x5 = x5*(200/abs(x5))+ random(bloom5*-1,bloom5);
@@ -320,6 +322,10 @@ var fire6c = function () {
 bulletspeed6=bulletspeed;
 damage6=damage;
 bloom6=bloom;
+x6 = mx-200;
+y6 = my-200;
+sx6 = x;
+sy6 = y;
 if(abs(x6) > abs(y6)) {
 y6 = y6*(200/abs(x6))+ random(bloom6*-1,bloom6);
 x6 = x6*(200/abs(x6))+ random(bloom6*-1,bloom6);
@@ -338,6 +344,10 @@ var fire7c = function () {
 bulletspeed7=bulletspeed;
 damage7=damage;
 bloom7=bloom;
+x7 = mx-200;
+y7 = my-200;
+sx7 = x;
+sy7 = y;
 if(abs(x7) > abs(y7)) {
 y7 = y7*(200/abs(x7))+ random(bloom7*-1,bloom7);
 x7 = x7*(200/abs(x7))+ random(bloom7*-1,bloom7);
@@ -356,6 +366,10 @@ var fire8c = function () {
 bulletspeed8=bulletspeed;
 damage8=damage;
 bloom8=bloom;
+x8 = mx-200;
+y8 = my-200;
+sx8 = x;
+sy8 = y;
 if(abs(x8) > abs(y8)) {
 y8 = y8*(200/abs(x8))+ random(bloom8*-1,bloom8);
 x8 = x8*(200/abs(x8))+ random(bloom8*-1,bloom8);
@@ -374,6 +388,10 @@ var fire9c = function () {
 bulletspeed9=bulletspeed;
 damage9=damage;
 bloom9=bloom;    
+x9 = mx-200;
+y9 = my-200;
+sx9 = x;
+sy9 = y;
 if(abs(x9) > abs(y9)) {
 y9 = y9*(200/abs(x9))+ random(bloom9*-1,bloom9);
 x9 = x9*(200/abs(x9))+ random(bloom9*-1,bloom9);
@@ -394,72 +412,36 @@ if(firerate > fireRate) {
 
 firerate = 0;
 if (fire8 === true && fire9 === false&& fire1 === true ) {
-x9 = mx-200;
-y9 = my-200;
-sx9 = x;
-sy9 = y;
 fire9();  
 }    
 if (fire7 === true && fire8 === false&& fire1 === true) {
-x8 = mx-200;
-y8 = my-200;
-sx8 = x;
-sy8 = y;
 fire8();
 }    
     
 if (fire6 === true && fire7 === false&& fire1 === true) {
-x7 = mx-200;
-y7 = my-200;
-sx7 = x;
-sy7 = y;
 fire7();
 }
 
 if (fire5 === true && fire6 === false&& fire1 === true) {
-x6 = mx-200;
-y6 = my-200;
-sx6 = x;
-sy6 = y;
 fire6c();
 }    
     
 if (fire4 === true && fire5 === false&& fire1 === true) {
-x5 = mx-200;
-y5 = my-200;
-sx5 = x;
-sy5 = y;
 fire5c();
 }
     
 if (fire3 === true && fire4 === false&& fire1 === true) {
-x4 = mx-200;
-y4 = my-200;
-sx4 = x;
-sy4 = y;
 fire4c();
 }
 
 if (fire2 === true && fire3 === false&& fire1 === true) {
-x3 = mx-200;
-y3 = my-200;
-sx3 = x;
-sy3 = y;
 fire3c();
 }    
     
 if (fire1 === true && fire2 === false) {
-x2 = mx-200;
-y2 = my-200;
-sx2 = x;
-sy2 = y;
 fire2c();
 }
 if (fire1 === false) {
-x1 = mx-200;
-y1 = my-200;
-sx1 = x;
-sy1 =  y;
 fire1c();
 }
 }
@@ -548,7 +530,7 @@ noStroke();
 fill(5, 234, 255);
 rect(0,0,400,400);
 if (saveCode[6] === 10) {
-bulletspeed = (35);    
+bulletspeed = (30);    
 damage = (3);
 fireRate = (19);
 bloom = (20);
@@ -556,7 +538,7 @@ shootType = (0);
 rare = (1);
 }
 if (saveCode[6] === 25) {
-bulletspeed = (40);    
+bulletspeed = (35);    
 damage = (8);
 fireRate = (50);
 bloom = (40);
@@ -564,7 +546,7 @@ shootType = (0);
 rare = (1);
 }
 if (saveCode[6] === 26) {
-bulletspeed = (40);    
+bulletspeed = (30);    
 damage = (2);
 fireRate = (10);
 bloom = (50);
@@ -673,59 +655,57 @@ rect(x + -109,y + 769,631,30);
 
 stroke(0, 0, 0);
 fill(201,201,201);
-rect(x + tablex + 39,y + tabley + 243,10,50);
-rect(x + tablex + 265 - 12,y + tabley + 243,10,50);
-rect(x + tablex + 260 - 12,y + tabley + 259,10,50);
-rect(x + tablex + 32,y + tabley + 259,10,50);
-rect(x + tablex + 30,y + tabley + 232,238,39);
+rect(x + -107 + 39,y + 251 + 243,10,50);
+rect(x + -107 + 265 - 12,y + 251 + 243,10,50);
+rect(x + -107 + 260 - 12,y + 251 + 259,10,50);
+rect(x + -107 + 32,y + 251 + 259,10,50);
+rect(x + -107 + 30,y + 251 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(0,255,0);
-rect(x + tablex1 + 39,y + tabley1 + 243,10,50);
-rect(x + tablex1 + 265 - 12,y + tabley1 + 243,10,50);
-rect(x + tablex1 + 260 - 12,y + tabley1 + 259,10,50);
-rect(x + tablex1 + 32,y + tabley1 + 259,10,50);
-rect(x + tablex1 + 30,y + tabley1 + 232,238,39);
+rect(x + 221 + 39,y + 251 + 243,10,50);
+rect(x + 221 + 265 - 12,y + 251 + 243,10,50);
+rect(x + 221 + 260 - 12,y + 251 + 259,10,50);
+rect(x + 221 + 32,y + 251 + 259,10,50);
+rect(x + 221 + 30,y + 251 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(0,0,255);
-rect(x + tablex2 + 39,y + tabley2 + 243,10,50);
-rect(x + tablex2 + 265 - 12,y + tabley2 + 243,10,50);
-rect(x + tablex2 + 260 - 12,y + tabley2 + 259,10,50);
-rect(x + tablex2 + 32,y + tabley2 + 259,10,50);
-rect(x + tablex2 + 30,y + tabley2 + 232,238,39);
-
+rect(x + -107 + 39,y + 341 + 243,10,50);
+rect(x + -107 + 265 - 12,y + 341 + 243,10,50);
+rect(x + -107 + 260 - 12,y + 341 + 259,10,50);
+rect(x + -107 + 32,y + 341 + 259,10,50);
+rect(x + -107 + 30,y + 341 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(255,0,255);
-rect(x + tablex3 + 39,y + tabley3 + 243,10,50);
-rect(x + tablex3 + 265 - 12,y + tabley3 + 243,10,50);
-rect(x + tablex3 + 260 - 12,y + tabley3 + 259,10,50);
-rect(x + tablex3 + 32,y + tabley3 + 259,10,50);
-rect(x + tablex3 + 30,y + tabley3 + 232,238,39);
+rect(x + 221 + 39,y + 341 + 243,10,50);
+rect(x + 221 + 265 - 12,y + 341 + 243,10,50);
+rect(x + 221 + 260 - 12,y + 341 + 259,10,50);
+rect(x + 221 + 32,y + 341 + 259,10,50);
+rect(x + 221 + 30,y + 341 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(255,215,0);
-rect(x + tablex4 + 39,y + tabley4 + 243,10,50);
-rect(x + tablex4 + 265 - 12,y + tabley4 + 243,10,50);
-rect(x + tablex4 + 260 - 12,y + tabley4 + 259,10,50);
-rect(x + tablex4 + 32,y + tabley4 + 259,10,50);
-rect(x + tablex4 + 30,y + tabley4 + 232,238,39);
+rect(x + -107 + 39,y + 431 + 243,10,50);
+rect(x + -107 + 265 - 12,y + 431 + 243,10,50);
+rect(x + -107 + 260 - 12,y + 431 + 259,10,50);
+rect(x + -107 + 32,y + 431 + 259,10,50);
+rect(x + -107 + 30,y + 431 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(250, 35, 35);
-rect(x + tablex5 + 39,y + tabley5 + 243,10,50);
-rect(x + tablex5 + 265 - 12,y + tabley5 + 243,10,50);
-rect(x + tablex5 + 260 - 12,y + tabley5 + 259,10,50);
-rect(x + tablex5 + 32,y + tabley5 + 259,10,50);
-rect(x + tablex5 + 30,y + tabley5 + 232,238,39);
+rect(x + 221 + 39,y + 431 + 243,10,50);
+rect(x + 221 + 265 - 12,y + 431 + 243,10,50);
+rect(x + 221 + 260 - 12,y + 431 + 259,10,50);
+rect(x + 221 + 32,y + 431 + 259,10,50);
+rect(x + 221 + 30,y + 431 + 232,238,39);
 
 stroke(0, 0, 0);
 fill(255, 255, 255);
 rect(x + -77, y + 730, 569,39);
-
 //move
-if (up === true && u === true && y < 147 && y > -115) {
+if (up === true && u === true && y < 147 && y > -117) {
  y = y + isyouspeed;
  
 
@@ -754,7 +734,7 @@ y = y - isyouspeed - 1;
      }
  if (left === true && l === true ) {
   
- if ( y > -116 && x < 135 ) {
+ if ( y > -117 && x < 135 ) {
  x = x + isyouspeed;
  }
       
@@ -770,7 +750,7 @@ x = x + isyouspeed + 1;
      
      }
  if (right === true && r === true) {
-if ( y > -116 &&  x > -132) {
+if ( y > -117 &&  x > -132) {
  x = x - isyouspeed;
 }
  if (y < -115 && x > -29 && right === true && r === true && y > -300) { 
@@ -799,7 +779,7 @@ bx1 = (bx1 + x1  / bulletspeed1) ;
 by1 = (by1 + y1 / bulletspeed1) ;
 }
 
-if(bx1 < 0 && fire1 === true) {
+if(bx1 < -200 && fire1 === true) {
 fire1 = false;
 bx1 = 200;
 by1 = 200;
@@ -808,7 +788,7 @@ y1 = 0;
 sx1 = 0;
 sy1 = 0;
 }
-if(bx1 > 400  &&fire1=== true) {
+if(bx1 > 600  &&fire1=== true) {
 fire1 = false;
 bx1 = 200;
 by1 = 200;
@@ -817,7 +797,7 @@ y1 = 0;
 sx1 = 0;
 sy1 = 0;
 }
-if(by1 < 0 && fire1=== true) {
+if(by1 < -200 && fire1=== true) {
 fire1 = false;
 bx1 = 200;
 by1 = 200;
@@ -826,7 +806,7 @@ y1 = 0;
 sx1 = 0;
 sy1 = 0;
 }
-if(by1 > 400 && fire1=== true) {
+if(by1 > 600 && fire1=== true) {
 fire1 = false;
 bx1 = 200;
 by1 = 200;
@@ -854,7 +834,7 @@ bx2 = bx2 + x2  / bulletspeed2;
 by2 = by2 + y2 / bulletspeed2;
 }
 
-if(bx2 < 0 && fire2 === true) {
+if(bx2 < -200 && fire2 === true) {
 fire2 = false;
 bx2 = 200;
 by2 = 200;
@@ -863,7 +843,7 @@ y2 = 0;
 sx2 = 0;
 sy2 = 0;
 }
-if(bx2 > 400  &&fire2=== true) {
+if(bx2 > 600  &&fire2=== true) {
 fire2 = false;
 bx2 = 200;
 by2 = 200;
@@ -872,7 +852,7 @@ y2 = 0;
 sx2 = 0;
 sy2 = 0;
 }
-if(by2 < 0 && fire2=== true) {
+if(by2 < -200 && fire2=== true) {
 fire2 = false;
 bx2 = 200;
 by2 = 200;
@@ -881,7 +861,7 @@ y2 = 0;
 sx2 = 0;
 sy2 = 0;
 }
-if(by2 > 400 && fire2=== true) {
+if(by2 > 600 && fire2=== true) {
 fire2 = false;
 bx2 = 200;
 by2 = 200;
@@ -911,7 +891,7 @@ bx3 = bx3 + x3  / bulletspeed3;
 by3 = by3 + y3 / bulletspeed3;
 }
 
-if(bx3 < 0 && fire3 === true) {
+if(bx3 < -200 && fire3 === true) {
 fire3 = false;
 bx3 = 200;
 by3 = 200;
@@ -920,7 +900,7 @@ y3 = 0;
 sx3 = 0;
 sy3 = 0;
 }
-if(bx3 > 400  &&fire3=== true) {
+if(bx3 > 600  &&fire3=== true) {
 fire3 = false;
 bx3 = 200;
 by3 = 200;
@@ -929,7 +909,7 @@ y3 = 0;
 sx3 = 0;
 sy3 = 0;
 }
-if(by3 < 0 && fire3=== true) {
+if(by3 < -200 && fire3=== true) {
 fire3 = false;
 bx3 = 200;
 by3 = 200;
@@ -938,7 +918,7 @@ y3 = 0;
 sx3 = 0;
 sy3 = 0;
 }
-if(by3 > 400 && fire3=== true) {
+if(by3 > 600 && fire3=== true) {
 fire3 = false;
 bx3 = 200;
 by3 = 200;
@@ -967,7 +947,7 @@ bx4 = bx4 + x4  / bulletspeed4;
 by4 = by4 + y4 / bulletspeed4;
 }
 
-if(bx4 < 0 && fire4 === true) {
+if(bx4 < -200 && fire4 === true) {
 fire4 = false;
 bx4 = 200;
 by4 = 200;
@@ -976,7 +956,7 @@ y4 = 0;
 sx4 = 0;
 sy4 = 0;
 }
-if(bx4 > 400  &&fire4=== true) {
+if(bx4 > 600  &&fire4=== true) {
 fire4 = false;
 bx4 = 200;
 by4 = 200;
@@ -985,7 +965,7 @@ y4 = 0;
 sx4 = 0;
 sy4 = 0;
 }
-if(by4 < 0 && fire4=== true) {
+if(by4 < -200 && fire4=== true) {
 fire4 = false;
 bx4 = 200;
 by4 = 200;
@@ -994,7 +974,7 @@ y4 = 0;
 sx4 = 0;
 sy4 = 0;
 }
-if(by4 > 400 && fire4=== true) {
+if(by4 > 600 && fire4=== true) {
 fire4 = false;
 bx4 = 200;
 by4 = 200;
@@ -1023,7 +1003,7 @@ bx5 = bx5 + x5  / bulletspeed5;
 by5 = by5 + y5 / bulletspeed5;
 }
 
-if(bx5 < 0 && fire5 === true) {
+if(bx5 < -200 && fire5 === true) {
 fire5 = false;
 bx5 = 200;
 by5 = 200;
@@ -1032,7 +1012,7 @@ y5 = 0;
 sx5 = 0;
 sy5 = 0;
 }
-if(bx5 > 400  &&fire5=== true) {
+if(bx5 > 600  &&fire5=== true) {
 fire5 = false;
 bx5 = 200;
 by5 = 200;
@@ -1041,7 +1021,7 @@ y5 = 0;
 sx5 = 0;
 sy5 = 0;
 }
-if(by5 < 0 && fire5=== true) {
+if(by5 < -200 && fire5=== true) {
 fire5 = false;
 bx5 = 200;
 by5 = 200;
@@ -1050,7 +1030,7 @@ y5 = 0;
 sx5 = 0;
 sy5 = 0;
 }
-if(by5 > 400 && fire5=== true) {
+if(by5 > 600 && fire5=== true) {
 fire5 = false;
 bx5 = 200;
 by5 = 200;
@@ -1078,7 +1058,7 @@ bx6 = bx6 + x6  / bulletspeed6;
 by6 = by6 + y6 / bulletspeed6;
 }
 
-if(bx6 < 0 && fire6 === true) {
+if(bx6 < -200 && fire6 === true) {
 fire6 = false;
 bx6 = 200;
 by6 = 200;
@@ -1087,7 +1067,7 @@ y6 = 0;
 sx6 = 0;
 sy6 = 0;
 }
-if(bx6 > 400  &&fire6=== true) {
+if(bx6 > 600  &&fire6=== true) {
 fire6 = false;
 bx6 = 200;
 by6 = 200;
@@ -1096,7 +1076,7 @@ y6 = 0;
 sx6 = 0;
 sy6 = 0;
 }
-if(by6 < 0 && fire6=== true) {
+if(by6 < -200 && fire6=== true) {
 fire6 = false;
 bx6 = 200;
 by6 = 200;
@@ -1105,7 +1085,7 @@ y6 = 0;
 sx6 = 0;
 sy6 = 0;
 }
-if(by6 > 400 && fire6=== true) {
+if(by6 > 600 && fire6=== true) {
 fire6 = false;
 bx6 = 200;
 by6 = 200;
@@ -1134,7 +1114,7 @@ bx7 = bx7 + x7  / bulletspeed7;
 by7 = by7 + y7 / bulletspeed7;
 }
 
-if(bx7 < 0 && fire7 === true) {
+if(bx7 < -200 && fire7 === true) {
 fire7 = false;
 bx7 = 200;
 by7 = 200;
@@ -1143,7 +1123,7 @@ y7 = 0;
 sx7 = 0;
 sy7 = 0;
 }
-if(bx7 > 400  &&fire7=== true) {
+if(bx7 > 600  &&fire7=== true) {
 fire7 = false;
 bx7 = 200;
 by7 = 200;
@@ -1152,7 +1132,7 @@ y7 = 0;
 sx7 = 0;
 sy7 = 0;
 }
-if(by7 < 0 && fire7=== true) {
+if(by7 < -200 && fire7=== true) {
 fire7 = false;
 bx7 = 200;
 by7 = 200;
@@ -1161,7 +1141,7 @@ y7 = 0;
 sx7 = 0;
 sy7 = 0;
 }
-if(by7 > 400 && fire7=== true) {
+if(by7 > 600 && fire7=== true) {
 fire7 = false;
 bx7 = 200;
 by7 = 200;
@@ -1190,7 +1170,7 @@ bx8 = bx8 + x8  / bulletspeed8;
 by8 = by8 + y8 / bulletspeed8;
 }
 
-if(bx8 < 0 && fire8 === true) {
+if(bx8 < -200 && fire8 === true) {
 fire8 = false;
 bx8 = 200;
 by8 = 200;
@@ -1199,7 +1179,7 @@ y8 = 0;
 sx8 = 0;
 sy8 = 0;
 }
-if(bx8 > 400  &&fire8=== true) {
+if(bx8 > 600  &&fire8=== true) {
 fire8 = false;
 bx8 = 200;
 by8 = 200;
@@ -1208,7 +1188,7 @@ y8 = 0;
 sx8 = 0;
 sy8 = 0;
 }
-if(by8 < 0 && fire8=== true) {
+if(by8 < -200 && fire8=== true) {
 fire8 = false;
 bx8 = 200;
 by8 = 200;
@@ -1217,7 +1197,7 @@ y8 = 0;
 sx8 = 0;
 sy8 = 0;
 }
-if(by8 > 400 && fire8=== true) {
+if(by8 > 600 && fire8=== true) {
 fire8 = false;
 bx8 = 200;
 by8 = 200;
@@ -1246,7 +1226,7 @@ bx9 = bx9 + x9  / bulletspeed9;
 by9 = by9 + y9 / bulletspeed9;
 }
 
-if(bx9 < 0 && fire9 === true) {
+if(bx9 < -200 && fire9 === true) {
 fire9 = false;
 bx9 = 200;
 by9 = 200;
@@ -1255,7 +1235,7 @@ y9 = 0;
 sx9 = 0;
 sy9 = 0;
 }
-if(bx9 > 400  &&fire9=== true) {
+if(bx9 > 600  &&fire9=== true) {
 fire9 = false;
 bx9 = 200;
 by9 = 200;
@@ -1264,7 +1244,7 @@ y9 = 0;
 sx9 = 0;
 sy9 = 0;
 }
-if(by9 < 0 && fire9=== true) {
+if(by9 < -200 && fire9=== true) {
 fire9 = false;
 bx9 = 200;
 by9 = 200;
@@ -1273,7 +1253,7 @@ y9 = 0;
 sx9 = 0;
 sy9 = 0;
 }
-if(by9 > 400 && fire9=== true) {
+if(by9 > 600 && fire9=== true) {
 fire9 = false;
 bx9 = 200;
 by9 = 200;
