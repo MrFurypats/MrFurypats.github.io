@@ -17,6 +17,10 @@
 <p id="riseoverrun"> </p>
 <br>
 <p id="slope"> </p>
+        <br>
+       <p i="y-intercept"> </p>
+        <br>
+        <p id="equation"> </p>
 
 <script>
  var askbuttonButton = document.getElementById("askforpoints");
@@ -29,10 +33,14 @@
     var rise = y2 - y1;
     var run = x2 - x1;
     var slope = (y2 - y1) / (x2 - x1);
+    var help = round( y1 / slope - 0.5);
+    var yin = y1 - (help * slope);
 document.getElementById("rise").innerHTML = "rise = " + rise;
 document.getElementById("run").innerHTML = "run = " + run;
 document.getElementById("slope").innerHTML = "slope = " + slope;
 document.getElementById("riseoverrun").innerHTML = "rise over run = " + rise + "/" + run;
+document.getElementById("y-intercept").innerHTML = " y-intercept = " + yin; 
+document.getElementById("equation").innerHTML = " equation is y =" + slope + "x + " + yin;
     };
     askbuttonButton.addEventListener("click", askforcode);
     
