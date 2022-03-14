@@ -26,9 +26,9 @@
     const y1 = prompt('what is the first y');
     const x2 = prompt('what is the secound x');
     const y2 = prompt('what is the secound y');
-    var rise = math.round((y2 - y1) - 0.5);
-    var run = math.round((x2 - x1) - 0.5);
-    var slope = rise / run;
+    var rise = y2 - y1;
+    var run = x2 - x1;
+    var slope = math.round((y2 - y1) - 0.5) / math.round((x2 - x1) - 0.5);
 document.getElementById("rise").innerHTML = "rise = " + rise;
 document.getElementById("run").innerHTML = "run = " + run;
 document.getElementById("slope").innerHTML = "slope = " + slope;
