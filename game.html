@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:38______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:39______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -58,6 +58,8 @@ color: rgb(135, 135, 135);
 
 
 
+
+
  var saveCode = [0,0,6,6,25,0,0,true,true,0,0];
 
 var Color = [0,255,255];
@@ -81,6 +83,10 @@ var bloom = (0);
 var shootType = (0);
 var rare = (1);
 
+var targetdamage = (0);
+var targetdamshow = (180);
+var targethitstop = (0);
+var targethelp = (0);
 
 var bulletspeed1 = (0);
 var damage1 = (0);
@@ -406,6 +412,91 @@ y1 = y1*(200/abs(y1)) + random(bloom1*-1,bloom1);
 }
 fire9 = true;
 };
+var targethit = function () {
+if (targethitstop < 2) {
+if (targethelp === 1) {
+targetdamage = targetdamage + damage1;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 2) {
+targetdamage = targetdamage + damage2;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 3) {
+targetdamage = targetdamage + damage3;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 4) {
+targetdamage = targetdamage + damage4;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 5) {
+targetdamage = targetdamage + damage5;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 6) {
+targetdamage = targetdamage + damage6;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 7) {
+targetdamage = targetdamage + damage7;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 8) {
+targetdamage = targetdamage + damage8;   
+}
+
+targetdamshow = (0);
+    
+}
+
+if (targethitstop < 2) {
+if (targethelp === 9) {
+targetdamage = targetdamage + damage9;   
+}
+
+targetdamshow = (0);
+    
+}
+
+
+    
+};
 mouseClicked = function () {
 if (saveCode[6] !== 0)  {
 if(firerate > fireRate) {
@@ -526,6 +617,7 @@ keyReleased = function() {
 draw = function () {
 mx = mouseX;
 my = mouseY;
+targetdamshow ++;
 noStroke();
 fill(5, 234, 255);
 rect(0,0,400,400);
@@ -1285,6 +1377,133 @@ if (chestOpen === true && chest === true) {
 // make chest lid
 }
 
+if (targetdamshow < 180) {
+fill(255, 0, 0);
+stroke(255, 0, 0);
+textSize(15);
+text(targetdamage,221 + x,228 + y);
+
+}
+else {
+targetdamage = 0;    
+}
+
+
+if (fire1 === true &&( bx1 + x - sx1) - 5 < 270 && (bx1 + x - sx1) + 5 > 230 && (by1 + y - sy1) - 5 < 270 && (by1 + y - sy1) + 5 > 230) {
+targethit();    
+targethelp = 1;
+targethitstop ++;
+}
+else{
+if ( targethelp === 1) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+if (fire2 === true &&( bx2 + x - sx2) - 5 < 270 && (bx2 + x - sx2) + 5 > 230 && (by2 + y - sy2) - 5 < 270 && (by2 + y - sy2) + 5 > 230) {
+targethit();    
+targethelp = 2;
+targethitstop ++;
+}
+else{
+if ( targethelp === 2) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+if (fire3 === true &&( bx3 + x - sx3) - 5 < 270 && (bx3 + x - sx3) + 5 > 230 && (by3 + y - sy3) - 5 < 270 && (by3 + y - sy3) + 5 > 230) {
+targethit();    
+targethelp = 3;
+targethitstop ++;
+}
+else{
+if ( targethelp === 3) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+if (fire4 === true &&( bx4 + x - sx4) - 5 < 270 && (bx4 + x - sx4) + 5 > 230 && (by4 + y - sy4) - 5 < 270 && (by4 + y - sy4) + 5 > 230) {
+targethit();    
+targethelp = 4;
+targethitstop ++;
+}
+else{
+if ( targethelp === 4) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+if (fire5 === true &&( bx5 + x - sx5) - 5 < 270 && (bx5 + x - sx5) + 5 > 230 && (by5 + y - sy5) - 5 < 270 && (by5 + y - sy5) + 5 > 230) {
+targethit();    
+targethelp = 5;
+targethitstop ++;
+}
+else{
+if ( targethelp === 5) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+
+if (fire6 === true &&( bx6 + x - sx6) - 5 < 270 && (bx6 + x - sx6) + 5 > 230 && (by6 + y - sy6) - 5 < 270 && (by6 + y - sy6) + 5 > 230) {
+targethit();    
+targethelp = 6;
+targethitstop ++;
+}
+else{
+if ( targethelp === 6) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+
+if (fire7 === true &&( bx7 + x - sx7) - 5 < 270 && (bx7 + x - sx7) + 5 > 230 && (by7 + y - sy7) - 5 < 270 && (by7 + y - sy7) + 5 > 230) {
+targethit();    
+targethelp = 7;
+targethitstop ++;
+}
+else{
+if ( targethelp === 7) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+
+if (fire8 === true &&( bx8 + x - sx8) - 5 < 270 && (bx8 + x - sx8) + 5 > 230 && (by8 + y - sy8) - 5 < 270 && (by8 + y - sy8) + 5 > 230) {
+targethit();    
+targethelp = 8;
+targethitstop ++;
+}
+else{
+if ( targethelp === 8) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+
+if (fire9 === true &&( bx9 + x - sx9) - 5 < 270 && (bx9 + x - sx9) + 5 > 230 && (by9 + y - sy9) - 5 < 270 && (by9 + y - sy9) + 5 > 230) {
+targethit();    
+targethelp = 9;
+targethitstop ++;
+}
+else{
+if ( targethelp === 9) {
+targethitstop = 0;    
+targethelp = 0;
+}
+}
+
+
+
+
 
 
 fill(255, 255, 255);
@@ -1299,8 +1518,6 @@ noStroke();
 ellipse(x + 250, y + 250,5.5,5.5);    
     
     
-
-
 
 fill(255, 255, 255);
 ellipse(x + 250,y + 250,35.5,35.5);
