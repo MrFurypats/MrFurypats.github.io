@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:40______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:41______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -57,17 +57,13 @@ color: rgb(135, 135, 135);
 
 
 
-
-
-
-
-
-
- var saveCode = [0,0,6,6,10,25,0,true,true,0,0];
+ var saveCode = [0,0,6,6,10,26,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
 var eyeColor = [0,0,0];
+
+frameRate(60);
 
 var placeGunuzix = (-176);
 var placeGunuziy = (17);
@@ -76,7 +72,7 @@ var hide = true;
 if (hide === true) {
 if (hide === true) {
 
-frameRate(60);
+
 
 var bulletspeed = (0);
 var damage = (0);
@@ -509,36 +505,45 @@ if(firerate > fireRate) {
 firerate = 0;
 if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === true && fire8 === true && fire9 === false) {
 fire9();  
+
 }    
 if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === true && fire8 === false) {
 fire8();
+
 }    
     
 if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === false) {
 fire7();
+
 }
 
 if (fire1 === true&&  fire2 === true && fire3 === true && fire4 === true && fire5 === true && fire6 === false) {
 fire6c();
+
 }    
     
 if (fire1 === true && fire2 === true &&  fire3 === true && fire4 === true && fire5 === false) {
 fire5c();
+
 }
     
 if (fire1 === true && fire2 === true && fire3 === true && fire4 === false) {
 fire4c();
+
 }
 
 if (fire1 === true && fire2 === true && fire3 === false) {
 fire3c();
+
 }    
     
 if (fire1 === true && fire2 === false) {
 fire2c();
+
 }
 if (fire1 === false) {
 fire1c();
+
 }
 }
 }    
@@ -622,6 +627,14 @@ keyReleased = function() {
  }  
      
  };
+mousePressed = function() {
+if (shootType === 1 ) {
+fullauto = true;    
+}
+};
+mouseReleased = function () {
+fullauto = false;
+};
 draw = function () {
 mx = mouseX;
 my = mouseY;
@@ -804,13 +817,6 @@ rect(x + 221 + 30,y + 431 + 232,238,39);
 stroke(0, 0, 0);
 fill(255, 255, 255);
 rect(x + -77, y + 730, 569,39);
-
-if (mouseIsPressed && shootType === 1) {
-fullauto = true;
-}
-else {
-fullauto = false;
-}
 
 //move
 if (up === true && u === true && y < 147 && y > -117) {
@@ -1729,7 +1735,9 @@ fill(255, 255, 255);
 textSize(9);
 text("uploud",372,48);
 
+
  };
+
 }
 
     }};
