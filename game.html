@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:39______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:40______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -60,7 +60,10 @@ color: rgb(135, 135, 135);
 
 
 
- var saveCode = [0,0,6,6,25,0,0,true,true,0,0];
+
+
+
+ var saveCode = [0,0,6,6,10,25,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -82,6 +85,8 @@ var firerate = (0);
 var bloom = (0);
 var shootType = (0);
 var rare = (1);
+
+var fullauto = false;
 
 var targetdamage = (0);
 var targetdamshow = (180);
@@ -497,35 +502,35 @@ targetdamshow = (0);
 
     
 };
-mouseClicked = function () {
+var shoot = function () {
 if (saveCode[6] !== 0)  {
 if(firerate > fireRate) {
 
 firerate = 0;
-if (fire8 === true && fire9 === false&& fire1 === true ) {
+if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === true && fire8 === true && fire9 === false) {
 fire9();  
 }    
-if (fire7 === true && fire8 === false&& fire1 === true) {
+if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === true && fire8 === false) {
 fire8();
 }    
     
-if (fire6 === true && fire7 === false&& fire1 === true) {
+if (fire1 === true &&  fire2 === true &&  fire3 === true && fire4 === true && fire5 === true && fire6 === true && fire7 === false) {
 fire7();
 }
 
-if (fire5 === true && fire6 === false&& fire1 === true) {
+if (fire1 === true&&  fire2 === true && fire3 === true && fire4 === true && fire5 === true && fire6 === false) {
 fire6c();
 }    
     
-if (fire4 === true && fire5 === false&& fire1 === true) {
+if (fire1 === true && fire2 === true &&  fire3 === true && fire4 === true && fire5 === false) {
 fire5c();
 }
     
-if (fire3 === true && fire4 === false&& fire1 === true) {
+if (fire1 === true && fire2 === true && fire3 === true && fire4 === false) {
 fire4c();
 }
 
-if (fire2 === true && fire3 === false&& fire1 === true) {
+if (fire1 === true && fire2 === true && fire3 === false) {
 fire3c();
 }    
     
@@ -536,7 +541,10 @@ if (fire1 === false) {
 fire1c();
 }
 }
-}
+}    
+};
+mouseClicked = function () {
+shoot();
 if(mx > 370 && my < 30) {
 println("Copy this save code : " );
 println(saveCode);
@@ -796,6 +804,14 @@ rect(x + 221 + 30,y + 431 + 232,238,39);
 stroke(0, 0, 0);
 fill(255, 255, 255);
 rect(x + -77, y + 730, 569,39);
+
+if (mouseIsPressed && shootType === 1) {
+fullauto = true;
+}
+else {
+fullauto = false;
+}
+
 //move
 if (up === true && u === true && y < 147 && y > -117) {
  y = y + isyouspeed;
@@ -1367,6 +1383,11 @@ else {
 bx9 = 200;
 by9 = 200;
     
+}
+
+
+if (fullauto === true && shootType === 1) {
+shoot();
 }
 if (chestOpen === false && chest === true) {
 // make chest closed    
