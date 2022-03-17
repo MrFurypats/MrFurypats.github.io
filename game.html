@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:41______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:42______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -82,6 +82,8 @@ var bloom = (0);
 var shootType = (0);
 var rare = (1);
 
+
+var bulletstop = false;
 var fullauto = false;
 
 var targetdamage = (0);
@@ -394,7 +396,7 @@ fire8 = true;
 var fire9c = function () {
 bulletspeed9=bulletspeed;
 damage9=damage;
-bloom9=bloom;    
+bloom9=bloom;
 x9 = mx-200;
 y9 = my-200;
 sx9 = x;
@@ -549,7 +551,6 @@ fire1c();
 }    
 };
 mouseClicked = function () {
-shoot();
 if(mx > 370 && my < 30) {
 println("Copy this save code : " );
 println(saveCode);
@@ -631,9 +632,16 @@ mousePressed = function() {
 if (shootType === 1 ) {
 fullauto = true;    
 }
+shoot();
 };
 mouseReleased = function () {
 fullauto = false;
+};
+mouseOut = function () {
+if (fullauto === true) {
+fullauto = false;
+}
+    
 };
 draw = function () {
 mx = mouseX;
@@ -659,9 +667,9 @@ shootType = (0);
 rare = (1);
 }
 if (saveCode[6] === 26) {
-bulletspeed = (30);    
+bulletspeed = (20);    
 damage = (2);
-fireRate = (10);
+fireRate = (15);
 bloom = (50);
 shootType = (1);
 rare = (1);
@@ -1737,7 +1745,6 @@ text("uploud",372,48);
 
 
  };
-
 }
 
     }};
