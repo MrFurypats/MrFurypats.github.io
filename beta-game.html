@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
  <head>
-    <title>game in html</title> 
+    <title>beta game</title> 
   
 <style> 
 
@@ -25,7 +25,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:42______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:43______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -57,7 +57,7 @@ color: rgb(135, 135, 135);
 
 
 
- var saveCode = [0,0,6,6,10,26,0,true,true,0,0];
+ var saveCode = [0,0,6,6,25,26,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -65,12 +65,16 @@ var eyeColor = [0,0,0];
 
 frameRate(60);
 
-var placeGunuzix = (-176);
-var placeGunuziy = (17);
 
 var hide = true;
 if (hide === true) {
 if (hide === true) {
+
+//gun costs
+var Uzicost = (50);
+var musketcost = (50);
+
+
 
 
 
@@ -647,6 +651,10 @@ draw = function () {
 mx = mouseX;
 my = mouseY;
 targetdamshow ++;
+/*
+println("x" + x);
+println("y" + y);
+*/
 noStroke();
 fill(5, 234, 255);
 rect(0,0,400,400);
@@ -825,6 +833,126 @@ rect(x + 221 + 30,y + 431 + 232,238,39);
 stroke(0, 0, 0);
 fill(255, 255, 255);
 rect(x + -77, y + 730, 569,39);
+// guns in store
+
+//gray
+fill(0, 0, 0);
+textSize(15);
+text("Uzi", 200 + -275 + x, 200 + 299 + y);
+text(Uzicost, 204 + -273 + x, 231+ 285 + y);
+noFill();
+stroke(0, 0, 0);
+rect(187 + -265  + x,186 + 295 + y,32,40);
+
+fill(0, 0, 0);
+textSize(10);
+text("Mus", 196 + -238 +  x, 200 + 295 + y);
+text("ket",196 + -238 + x, 200 + 303 + y ); 
+textSize(15);
+text(musketcost, 231 + -268 + x, 231+ 285 + y);
+noFill();
+stroke(0, 0, 0);
+rect(187 + -232 + x ,186 + 295 + y ,32,40);
+
+rect(187 + -198 + x ,186 + 295 + y ,33,40);
+
+rect(187 + -163 + x ,186 + 295 + y ,33,40);
+
+rect(187 + -128 + x ,186 + 295 + y ,33,40);
+
+rect(187 + -93 + x ,186 + 295 + y ,33,40);
+
+rect(187 + -60 + x ,186 + 295 + y ,33,40);
+
+
+
+
+//blue
+
+
+rect(187 + -265  + x,186 + 295 + y +91,32,40);
+
+rect(187 + -232 + x ,186 + 295 + y +91,32,40);
+
+rect(187 + -198 + x ,186 + 295 + y +91,33,40);
+
+rect(187 + -163 + x ,186 + 295 + y +91,33,40);
+
+rect(187 + -128 + x ,186 + 295 + y +91,33,40);
+
+rect(187 + -93 + x ,186 + 295 + y +91,33,40);
+
+rect(187 + -60 + x ,186 + 295 + y +91,33,40);
+
+//gold
+
+  
+rect(187 + -265  + x,186 + 295 + y +182,32,40);
+ 
+rect(187 + -232 + x ,186 + 295 + y +182,32,40);
+ 
+rect(187 + -198 + x ,186 + 295 + y +182,33,40);
+ 
+rect(187 + -163 + x ,186 + 295 + y +182,33,40);
+ 
+rect(187 + -128 + x ,186 + 295 + y +182,33,40);
+ 
+rect(187 + -93 + x ,186 + 295 + y +182,33,40);
+ 
+rect(187 + -60 + x ,186 + 295 + y +182,33,40);
+ 
+ 
+//green
+ 
+rect(187 + -265  + x + 330,186 + 295 + y ,32,40);
+ 
+rect(187 + -232 + x + 330 ,186 + 295 + y ,32,40);
+ 
+rect(187 + -198 + x  + 330,186 + 295 + y ,33,40);
+ 
+rect(187 + -163 + x + 330 ,186 + 295 + y ,33,40);
+ 
+rect(187 + -128 + x + 330 ,186 + 295 + y ,33,40);
+ 
+rect(187 + -93 + x  + 330,186 + 295 + y ,33,40);
+ 
+rect(187 + -60 + x  + 330,186 + 295 + y ,33,40);
+ 
+ 
+//per
+ 
+ 
+rect(187 + -265  + x + 330,186 + 295 + y + 91,32,40);
+ 
+rect(187 + -232 + x + 330 ,186 + 295 + y + 91,32,40);
+ 
+rect(187 + -198 + x  + 330,186 + 295 + y + 91,33,40);
+ 
+rect(187 + -163 + x + 330 ,186 + 295 + y + 91,33,40);
+ 
+rect(187 + -128 + x + 330 ,186 + 295 + y + 91,33,40);
+ 
+rect(187 + -93 + x  + 330,186 + 295 + y + 91,33,40);
+ 
+rect(187 + -60 + x  + 330,186 + 295 + y + 91,33,40);
+ 
+//red
+rect(187 + -265  + x + 330,186 + 295 + y + 182,32,40);
+ 
+rect(187 + -232 + x + 330 ,186 + 295 + y  + 182,32,40);
+ 
+rect(187 + -198 + x  + 330,186 + 295 + y  + 182,33,40);
+ 
+rect(187 + -163 + x + 330 ,186 + 295 + y + 182,33,40);
+ 
+rect(187 + -128 + x + 330 ,186 + 295 + y + 182,33,40);
+ 
+rect(187 + -93 + x  + 330,186 + 295 + y + 182,33,40);
+ 
+rect(187 + -60 + x  + 330,186 + 295 + y + 182,33,40);
+ 
+
+
 
 //move
 if (up === true && u === true && y < 147 && y > -117) {
@@ -1424,7 +1552,7 @@ targetdamage = 0;
 }
 
 
-if (fire1 === true &&( bx1 + x - sx1) - 5 < 270 && (bx1 + x - sx1) + 5 > 230 && (by1 + y - sy1) - 5 < 270 && (by1 + y - sy1) + 5 > 230) {
+if (fire1 === true &&( bx1 - sx1) - 5 < 270 && (bx1 - sx1) + 5 > 230 && (by1 - sy1) - 5 < 270 && (by1 - sy1) + 5 > 230) {
 targethit();    
 targethelp = 1;
 targethitstop ++;
@@ -1436,7 +1564,7 @@ targethelp = 0;
 }
 }
 
-if (fire2 === true &&( bx2 + x - sx2) - 5 < 270 && (bx2 + x - sx2) + 5 > 230 && (by2 + y - sy2) - 5 < 270 && (by2 + y - sy2) + 5 > 230) {
+if (fire2 === true &&( bx2 - sx2) - 5 < 270 && (bx2 - sx2) + 5 > 230 && (by2 - sy2) - 5 < 270 && (by2 - sy2) + 5 > 230) {
 targethit();    
 targethelp = 2;
 targethitstop ++;
@@ -1448,7 +1576,7 @@ targethelp = 0;
 }
 }
 
-if (fire3 === true &&( bx3 + x - sx3) - 5 < 270 && (bx3 + x - sx3) + 5 > 230 && (by3 + y - sy3) - 5 < 270 && (by3 + y - sy3) + 5 > 230) {
+if (fire3 === true &&( bx3 - sx3) - 5 < 270 && (bx3 - sx3) + 5 > 230 && (by3 - sy3) - 5 < 270 && (by3 - sy3) + 5 > 230) {
 targethit();    
 targethelp = 3;
 targethitstop ++;
@@ -1460,7 +1588,7 @@ targethelp = 0;
 }
 }
 
-if (fire4 === true &&( bx4 + x - sx4) - 5 < 270 && (bx4 + x - sx4) + 5 > 230 && (by4 + y - sy4) - 5 < 270 && (by4 + y - sy4) + 5 > 230) {
+if (fire4 === true &&( bx4 - sx4) - 5 < 270 && (bx4 - sx4) + 5 > 230 && (by4 - sy4) - 5 < 270 && (by4 - sy4) + 5 > 230) {
 targethit();    
 targethelp = 4;
 targethitstop ++;
@@ -1472,7 +1600,7 @@ targethelp = 0;
 }
 }
 
-if (fire5 === true &&( bx5 + x - sx5) - 5 < 270 && (bx5 + x - sx5) + 5 > 230 && (by5 + y - sy5) - 5 < 270 && (by5 + y - sy5) + 5 > 230) {
+if (fire5 === true &&( bx5 - sx5) - 5 < 270 && (bx5 - sx5) + 5 > 230 && (by5 - sy5) - 5 < 270 && (by5 - sy5) + 5 > 230) {
 targethit();    
 targethelp = 5;
 targethitstop ++;
@@ -1485,7 +1613,7 @@ targethelp = 0;
 }
 
 
-if (fire6 === true &&( bx6 + x - sx6) - 5 < 270 && (bx6 + x - sx6) + 5 > 230 && (by6 + y - sy6) - 5 < 270 && (by6 + y - sy6) + 5 > 230) {
+if (fire6 === true &&( bx6 - sx6) - 5 < 270 && (bx6 - sx6) + 5 > 230 && (by6 - sy6) - 5 < 270 && (by6 - sy6) + 5 > 230) {
 targethit();    
 targethelp = 6;
 targethitstop ++;
@@ -1498,7 +1626,7 @@ targethelp = 0;
 }
 
 
-if (fire7 === true &&( bx7 + x - sx7) - 5 < 270 && (bx7 + x - sx7) + 5 > 230 && (by7 + y - sy7) - 5 < 270 && (by7 + y - sy7) + 5 > 230) {
+if (fire7 === true &&( bx7 - sx7) - 5 < 270 && (bx7 - sx7) + 5 > 230 && (by7 - sy7) - 5 < 270 && (by7 - sy7) + 5 > 230) {
 targethit();    
 targethelp = 7;
 targethitstop ++;
@@ -1511,7 +1639,7 @@ targethelp = 0;
 }
 
 
-if (fire8 === true &&( bx8 + x - sx8) - 5 < 270 && (bx8 + x - sx8) + 5 > 230 && (by8 + y - sy8) - 5 < 270 && (by8 + y - sy8) + 5 > 230) {
+if (fire8 === true &&( bx8 - sx8) - 5 < 270 && (bx8 - sx8) + 5 > 230 && (by8 - sy8) - 5 < 270 && (by8 - sy8) + 5 > 230) {
 targethit();    
 targethelp = 8;
 targethitstop ++;
@@ -1524,7 +1652,7 @@ targethelp = 0;
 }
 
 
-if (fire9 === true &&( bx9 + x - sx9) - 5 < 270 && (bx9 + x - sx9) + 5 > 230 && (by9 + y - sy9) - 5 < 270 && (by9 + y - sy9) + 5 > 230) {
+if (fire9 === true &&( bx9 - sx9) - 5 < 270 && (bx9 - sx9) + 5 > 230 && (by9 - sy9) - 5 < 270 && (by9 - sy9) + 5 > 230) {
 targethit();    
 targethelp = 9;
 targethitstop ++;
@@ -1583,6 +1711,7 @@ ellipse(208,187,3,3);
 
 
 }
+
 
  
 if( rare === 1) {
@@ -1746,6 +1875,8 @@ text("uploud",372,48);
 
  };
 }
+
+
 
     }};
 
