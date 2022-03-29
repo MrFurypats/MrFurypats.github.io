@@ -21,11 +21,10 @@ color: rgb(135, 135, 135);
 
     </p>
 <br>
- <button id="givesavecode">git savecode</button>
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:43______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:44______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -33,15 +32,14 @@ color: rgb(135, 135, 135);
  
  <script>
 
-    var givesavecodeButton = document.getElementById("givesavecode");
-    var givesavecodefromfile = function() {
- var saveCode = localStorage.getItem("saveCodeinstorage");
-      alert("Here is your save code " + saveCode);
-    };
-    givesavecodeButton.addEventListener("click", givesavecodefromfile);
+
+var saveCodeht = localStorage.getItem("saveCodeinstorage");
+let hello = saveCodeht;   
+const htmlsc = hello.split(",");
    
    
-    var askbuttonButton = document.getElementById("askbutton");
+var askbuttonButton = document.getElementById("askbutton");
+
     var askforcode = function() {
     const saveCode = prompt('paist save code');
     localStorage.setItem("saveCodeinstorage", saveCode);
@@ -53,7 +51,6 @@ color: rgb(135, 135, 135);
      with (processingInstance) {
         size(400, 400); 
         frameRate(50);
-
 
 
 
@@ -560,7 +557,13 @@ println("Copy this save code : " );
 println(saveCode);
 }
 if(mx > 370 && my > 30 && my < 60) {
-println("saving being added soon");   
+saveCode = htmlsc; 
+    
+    
+    
+    
+    
+    
     
     
 }
@@ -1876,13 +1879,9 @@ text("uploud",372,48);
  };
 }
 
-
-
     }};
 
  
     var canvas = document.getElementById("mycanvas"); 
     var processingInstance = new Processing(canvas, sketchProc); 
  </script>
-
-</html>
