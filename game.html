@@ -53,8 +53,7 @@ var askbuttonButton = document.getElementById("askbutton");
         frameRate(50);
 
 
-
- var saveCode = [0,0,6,6,25,26,0,true,true,0,0];
+var saveCode = [0,0,6,6,25,26,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -558,7 +557,7 @@ println(saveCode);
 }
 if(mx > 370 && my > 30 && my < 60) {
 saveCode = htmlsc; 
-    
+saveCode[6] = saveCode[4];  
     
     
     
