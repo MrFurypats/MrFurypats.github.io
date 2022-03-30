@@ -24,7 +24,7 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:47______________________________________________________________________________________________________</p>
+<p class="ver">_______________________________________________________V:48______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -55,7 +55,8 @@ var askbuttonButton = document.getElementById("askbutton");
 
 
 
-var saveCode = [0,0,6,6,25,26,0,true,true,0,0];
+
+var saveCode = [0,0,6,6,10,0,0,true,true,0,0];
 
 var Color = [0,255,255];
 var skinColor = [233,150,122];
@@ -69,12 +70,103 @@ if (hide === true) {
 if (hide === true) {
 
 //gun costs
-var Uzicost = (50);
-var musketcost = (50);
+
+var gy1c = (0);
+var gy2c = (0);
+var gy3c = (0);
+var gy4c = (0);
+var gy5c = (0);
+var gy6c = (0);
+var gy7c = (0);
+
+var gry1c = (0);
+var gry2c = (0);
+var gry3c = (0);
+var gry4c = (0);
+var gry5c = (0);
+var gry6c = (0);
+var gry7c = (0);
+
+var bly1c = (0);
+var bly2c = (0);
+var bly3c = (0);
+var bly4c = (0);
+var bly5c = (0);
+var bly6c = (0);
+var bly7c = (0);
+
+var py1c = (0);
+var py2c = (0);
+var py3c = (0);
+var py4c = (0);
+var py5c = (0);
+var py6c = (0);
+var py7c = (0);
+
+var yy1c = (0);
+var yy2c = (0);
+var yy3c = (0);
+var yy4c = (0);
+var yy5c = (0);
+var yy6c = (0);
+var yy7c = (0);
+
+var ry1c = (0);
+var ry2c = (0);
+var ry3c = (0);
+var ry4c = (0);
+var ry5c = (0);
+var ry6c = (0);
+var ry7c = (0);
 
 
+var gy1 = (false);
+var gy2 = (false);
+var gy3 = (false);
+var gy4 = (false);
+var gy5 = (false);
+var gy6 = (false);
+var gy7 = (false);
 
+var gry1 = (false);
+var gry2 = (false);
+var gry3 = (false);
+var gry4 = (false);
+var gry5 = (false);
+var gry6 = (false);
+var gry7 = (false);
 
+var bly1 = (false);
+var bly2 = (false);
+var bly3 = (false);
+var bly4 = (false);
+var bly5 = (false);
+var bly6 = (false);
+var bly7 = (false);
+
+var py1 = (false);
+var py2 = (false);
+var py3 = (false);
+var py4 = (false);
+var py5 = (false);
+var py6 = (false);
+var py7 = (false);
+
+var yy1 = (false);
+var yy2 = (false);
+var yy3 = (false);
+var yy4 = (false);
+var yy5 = (false);
+var yy6 = (false);
+var yy7 = (false);
+
+var ry1 = (false);
+var ry2 = (false);
+var ry3 = (false);
+var ry4 = (false);
+var ry5 = (false);
+var ry6 = (false);
+var ry7 = (false);
 
 var bulletspeed = (0);
 var damage = (0);
@@ -600,7 +692,307 @@ keyPressed = function() {
    }
    
     }
-   
+// nice
+   if (keyCode === 69) {
+// main
+if (saveCode[7] === true) {
+if ( gy1 === true && gy1c < saveCode[1] + 1 && saveCode[4] !== 5&&saveCode[5]!==5) {
+saveCode[4] = 5;    
+saveCode[1] = saveCode[1] - gy1c;
+}
+if ( gy2 === true && gy2c < saveCode[1] + 1 && saveCode[4] !== 10&&saveCode[5]!==10) {
+saveCode[4] = 10;    
+saveCode[1] = saveCode[1] - gy2c;
+}
+if ( gy3 === true && gy3c < saveCode[1] + 1 && saveCode[4]!== 15&&saveCode[5]!==15) {
+saveCode[4] = 15;    
+saveCode[1] = saveCode[1] - gy3c;
+}
+if ( gy4 === true && gy4c < saveCode[1] + 1 && saveCode[4]!== 20&&saveCode[5]!==20) {
+saveCode[4] = 20;    
+saveCode[1] = saveCode[1] - gy4c;
+}
+if ( gy5 === true && gy5c < saveCode[1] + 1 && saveCode[4]!== 25&&saveCode[5]!==25) {
+saveCode[4] = 25;    
+saveCode[1] = saveCode[1] - gy5c;
+}
+if ( gy6 === true && gy6c < saveCode[1] + 1 && saveCode[4]!== 30&&saveCode[5]!==30) {
+saveCode[4] = 30;  
+saveCode[1] = saveCode[1] - gy6c;
+}
+if ( gy7 === true && gy7c < saveCode[1] + 1 && saveCode[4]!== 35&&saveCode[5]!==35) {
+saveCode[4] = 35;    
+saveCode[1] = saveCode[1] - gy7c;
+}
+if ( gry1 === true && gry1c < saveCode[1] + 1 && saveCode[4]!== 4&&saveCode[5]!==4) {
+saveCode[4] = 4;   
+saveCode[1] = saveCode[1] - gry1c;
+}
+if ( gry2 === true && gry2c < saveCode[1] + 1 && saveCode[4]!== 9&&saveCode[5]!==9) {
+saveCode[4] = 9;
+saveCode[1] = saveCode[1] - gry2c;
+}
+if ( gry3 === true && gry3c < saveCode[1] + 1 && saveCode[4]!== 14&&saveCode[5]!==14) {
+saveCode[4] = 14;   
+saveCode[1] = saveCode[1] - gry3c;
+}
+if ( gry4 === true && gry4c < saveCode[1] + 1 && saveCode[4]!== 19&&saveCode[5]!==19) {
+saveCode[4] = 19;    
+saveCode[1] = saveCode[1] - gry4c;
+}
+if ( gry5 === true && gry5c < saveCode[1] + 1 && saveCode[4]!== 24&&saveCode[5]!==24) {
+saveCode[4] = 24;    
+saveCode[1] = saveCode[1] - gry5c;
+}
+if ( gry6 === true && gry6c < saveCode[1] + 1 && saveCode[4]!== 29&&saveCode[5]!==29) {
+saveCode[4] = 29;    
+saveCode[1] = saveCode[1] - gry6c;
+}
+if ( gry7 === true && gry7c < saveCode[1] + 1 && saveCode[4]!== 34&&saveCode[5]!==34) {
+saveCode[4] = 34; 
+saveCode[1] = saveCode[1] - gry7c;
+}
+if ( bly1 === true && bly1c < saveCode[1] + 1 && saveCode[4]!== 3&&saveCode[5]!==3) {
+saveCode[4] = 3;    
+saveCode[1] = saveCode[1] - bly1c;
+}
+if ( bly2 === true && bly2c < saveCode[1] + 1 && saveCode[4]!== 8&&saveCode[5]!==8) {
+saveCode[4] = 8;    
+saveCode[1] = saveCode[1] - bly2c;
+}
+if ( bly3 === true && bly3c < saveCode[1] + 1 && saveCode[4]!== 13&&saveCode[5]!==13) {
+saveCode[4] = 13;    
+saveCode[1] = saveCode[1] - bly3c;
+}
+if ( bly4 === true && bly4c < saveCode[1] + 1 && saveCode[4]!== 18&&saveCode[5]!==18) {
+saveCode[4] = 18;    
+saveCode[1] = saveCode[1] - bly4c;
+}
+if ( bly5 === true && bly5c < saveCode[1] + 1 && saveCode[4]!== 23&&saveCode[5]!==23) {
+saveCode[4] = 23;    
+saveCode[1] = saveCode[1] - bly5c;
+}
+if ( bly6 === true && bly6c < saveCode[1] + 1 && saveCode[4]!== 28&&saveCode[5]!==28) {
+saveCode[4] = 28;    
+saveCode[1] = saveCode[1] - bly6c;
+}
+if ( bly7 === true && bly7c < saveCode[1] + 1 && saveCode[4]!== 33&&saveCode[5]!==33) {
+saveCode[4] = 33;    
+saveCode[1] = saveCode[1] - bly7c;
+}
+if ( py1 === true && py1c < saveCode[1] + 1 && saveCode[4]!== 2&&saveCode[5]!==2) {
+saveCode[4] = 2;    
+saveCode[1] = saveCode[1] - py1c;
+}
+if ( py2 === true && py2c < saveCode[1] + 1 && saveCode[4]!== 7&&saveCode[5]!==7) {
+saveCode[4] = 7;    
+saveCode[1] = saveCode[1] - py2c;
+}
+if ( py3 === true && py3c < saveCode[1] + 1 && saveCode[4]!== 12&&saveCode[5]!==12) {
+saveCode[4] = 12;    
+saveCode[1] = saveCode[1] - py3c;
+}
+if ( py4 === true && py4c < saveCode[1] + 1 && saveCode[4]!== 17&&saveCode[5]!==17) {
+saveCode[4] = 17;   
+saveCode[1] = saveCode[1] - py4c;
+}
+if ( py5 === true && py5c < saveCode[1] + 1 && saveCode[4]!== 22&&saveCode[5]!==22) {
+saveCode[4] = 22;    
+saveCode[1] = saveCode[1] - py5c;
+}
+if ( py6 === true && py6c < saveCode[1] + 1 && saveCode[4]!== 27&&saveCode[5]!==27) {
+saveCode[4] = 27; 
+saveCode[1] = saveCode[1] - py6c;
+}
+if ( py7 === true && py7c < saveCode[1] + 1 && saveCode[4]!== 32&&saveCode[5]!==32) {
+saveCode[4] = 32;    
+saveCode[1] = saveCode[1] - py7c;
+}
+if ( yy1 === true && yy1c < saveCode[1] + 1 && saveCode[4]!== 1&&saveCode[5]!==1) {
+saveCode[4] = 1;    
+saveCode[1] = saveCode[1] - yy1c;
+}
+if ( yy2 === true && yy2c < saveCode[1] + 1 && saveCode[4]!== 6&&saveCode[5]!==6) {
+saveCode[4] = 6;    
+saveCode[1] = saveCode[1] - yy2c;
+}
+if ( yy3 === true && yy3c < saveCode[1] + 1 && saveCode[4]!== 11&&saveCode[5]!==11) {
+saveCode[4] = 11;    
+saveCode[1] = saveCode[1] - yy3c;
+}
+if ( yy4 === true && yy4c < saveCode[1] + 1 && saveCode[4]!== 16&&saveCode[5]!==16) {
+saveCode[4] = 16;    
+saveCode[1] = saveCode[1] - yy4c;
+}
+if ( yy5 === true && yy5c < saveCode[1] + 1 && saveCode[4]!== 21&&saveCode[5]!==21) {
+saveCode[4] = 21;  
+saveCode[1] = saveCode[1] - yy5c;
+}
+if ( yy6 === true && yy6c < saveCode[1] + 1 && saveCode[4]!== 26&&saveCode[5]!==26) {
+saveCode[4] = 26;  
+saveCode[1] = saveCode[1] - yy6c;
+}
+if ( yy7 === true && yy7c < saveCode[1] + 1 && saveCode[4]!== 31&&saveCode[5]!==31) {
+saveCode[4] = 31;    
+saveCode[1] = saveCode[1] - yy7c;
+}
+
+
+saveCode[6] = saveCode[4];
+ 
+    
+}
+if (saveCode[7] === false) {
+if ( gy1 === true && gy1c < saveCode[1] + 1 && saveCode[4] !== 5&&saveCode[5]!==5) {
+saveCode[5] =5;    
+saveCode[1] = saveCode[1] - gy1c;
+}
+if ( gy2 === true && gy2c < saveCode[1] + 1 && saveCode[4] !== 10&&saveCode[5]!==10) {
+saveCode[5] =10;    
+saveCode[1] = saveCode[1] - gy2c;
+}
+if ( gy3 === true && gy3c < saveCode[1] + 1 && saveCode[4]!== 15&&saveCode[5]!==15) {
+saveCode[5] =15;    
+saveCode[1] = saveCode[1] - gy3c;
+}
+if ( gy4 === true && gy4c < saveCode[1] + 1 && saveCode[4]!== 20&&saveCode[5]!==20) {
+saveCode[5] =20;    
+saveCode[1] = saveCode[1] - gy4c;
+}
+if ( gy5 === true && gy5c < saveCode[1] + 1 && saveCode[4]!== 25&&saveCode[5]!==25) {
+saveCode[5] =25;    
+saveCode[1] = saveCode[1] - gy5c;
+}
+if ( gy6 === true && gy6c < saveCode[1] + 1 && saveCode[4]!== 30&&saveCode[5]!==30) {
+saveCode[5] =30;  
+saveCode[1] = saveCode[1] - gy6c;
+}
+if ( gy7 === true && gy7c < saveCode[1] + 1 && saveCode[4]!== 35&&saveCode[5]!==35) {
+saveCode[5] =35;    
+saveCode[1] = saveCode[1] - gy7c;
+}
+if ( gry1 === true && gry1c < saveCode[1] + 1 && saveCode[4]!== 4&&saveCode[5]!==4) {
+saveCode[5] =4;   
+saveCode[1] = saveCode[1] - gry1c;
+}
+if ( gry2 === true && gry2c < saveCode[1] + 1 && saveCode[4]!== 9&&saveCode[5]!==9) {
+saveCode[5] =9;
+saveCode[1] = saveCode[1] - gry2c;
+}
+if ( gry3 === true && gry3c < saveCode[1] + 1 && saveCode[4]!== 14&&saveCode[5]!==14) {
+saveCode[5] =14;   
+saveCode[1] = saveCode[1] - gry3c;
+}
+if ( gry4 === true && gry4c < saveCode[1] + 1 && saveCode[4]!== 19&&saveCode[5]!==19) {
+saveCode[5] =19;    
+saveCode[1] = saveCode[1] - gry4c;
+}
+if ( gry5 === true && gry5c < saveCode[1] + 1 && saveCode[4]!== 24&&saveCode[5]!==24) {
+saveCode[5] =24;    
+saveCode[1] = saveCode[1] - gry5c;
+}
+if ( gry6 === true && gry6c < saveCode[1] + 1 && saveCode[4]!== 29&&saveCode[5]!==29) {
+saveCode[5] =29;    
+saveCode[1] = saveCode[1] - gry6c;
+}
+if ( gry7 === true && gry7c < saveCode[1] + 1 && saveCode[4]!== 34&&saveCode[5]!==34) {
+saveCode[5] =34; 
+saveCode[1] = saveCode[1] - gry7c;
+}
+if ( bly1 === true && bly1c < saveCode[1] + 1 && saveCode[4]!== 3&&saveCode[5]!==3) {
+saveCode[5] =3;    
+saveCode[1] = saveCode[1] - bly1c;
+}
+if ( bly2 === true && bly2c < saveCode[1] + 1 && saveCode[4]!== 8&&saveCode[5]!==8) {
+saveCode[5] =8;    
+saveCode[1] = saveCode[1] - bly2c;
+}
+if ( bly3 === true && bly3c < saveCode[1] + 1 && saveCode[4]!== 13&&saveCode[5]!==13) {
+saveCode[5] =13;    
+saveCode[1] = saveCode[1] - bly3c;
+}
+if ( bly4 === true && bly4c < saveCode[1] + 1 && saveCode[4]!== 18&&saveCode[5]!==18) {
+saveCode[5] =18;    
+saveCode[1] = saveCode[1] - bly4c;
+}
+if ( bly5 === true && bly5c < saveCode[1] + 1 && saveCode[4]!== 23&&saveCode[5]!==23) {
+saveCode[5] =23;    
+saveCode[1] = saveCode[1] - bly5c;
+}
+if ( bly6 === true && bly6c < saveCode[1] + 1 && saveCode[4]!== 28&&saveCode[5]!==28) {
+saveCode[5] =28;    
+saveCode[1] = saveCode[1] - bly6c;
+}
+if ( bly7 === true && bly7c < saveCode[1] + 1 && saveCode[4]!== 33&&saveCode[5]!==33) {
+saveCode[5] =33;    
+saveCode[1] = saveCode[1] - bly7c;
+}
+if ( py1 === true && py1c < saveCode[1] + 1 && saveCode[4]!== 2&&saveCode[5]!==2) {
+saveCode[5] =2;    
+saveCode[1] = saveCode[1] - py1c;
+}
+if ( py2 === true && py2c < saveCode[1] + 1 && saveCode[4]!== 7&&saveCode[5]!==7) {
+saveCode[5] =7;    
+saveCode[1] = saveCode[1] - py2c;
+}
+if ( py3 === true && py3c < saveCode[1] + 1 && saveCode[4]!== 12&&saveCode[5]!==12) {
+saveCode[5] =12;    
+saveCode[1] = saveCode[1] - py3c;
+}
+if ( py4 === true && py4c < saveCode[1] + 1 && saveCode[4]!== 17&&saveCode[5]!==17) {
+saveCode[5] =17;   
+saveCode[1] = saveCode[1] - py4c;
+}
+if ( py5 === true && py5c < saveCode[1] + 1 && saveCode[4]!== 22&&saveCode[5]!==22) {
+saveCode[5] =22;    
+saveCode[1] = saveCode[1] - py5c;
+}
+if ( py6 === true && py6c < saveCode[1] + 1 && saveCode[4]!== 27&&saveCode[5]!==27) {
+saveCode[5] =27; 
+saveCode[1] = saveCode[1] - py6c;
+}
+if ( py7 === true && py7c < saveCode[1] + 1 && saveCode[4]!== 32&&saveCode[5]!==32) {
+saveCode[5] =32;    
+saveCode[1] = saveCode[1] - py7c;
+}
+if ( yy1 === true && yy1c < saveCode[1] + 1 && saveCode[4]!== 1&&saveCode[5]!==1) {
+saveCode[5] =1;    
+saveCode[1] = saveCode[1] - yy1c;
+}
+if ( yy2 === true && yy2c < saveCode[1] + 1 && saveCode[4]!== 6&&saveCode[5]!==6) {
+saveCode[5] =6;    
+saveCode[1] = saveCode[1] - yy2c;
+}
+if ( yy3 === true && yy3c < saveCode[1] + 1 && saveCode[4]!== 11&&saveCode[5]!==11) {
+saveCode[5] =11;    
+saveCode[1] = saveCode[1] - yy3c;
+}
+if ( yy4 === true && yy4c < saveCode[1] + 1 && saveCode[4]!== 16&&saveCode[5]!==16) {
+saveCode[5] =16;    
+saveCode[1] = saveCode[1] - yy4c;
+}
+if ( yy5 === true && yy5c < saveCode[1] + 1 && saveCode[4]!== 21&&saveCode[5]!==21) {
+saveCode[5] =21;  
+saveCode[1] = saveCode[1] - yy5c;
+}
+if ( yy6 === true && yy6c < saveCode[1] + 1 && saveCode[4]!== 26&&saveCode[5]!==26) {
+saveCode[5] =26;  
+saveCode[1] = saveCode[1] - yy6c;
+}
+if ( yy7 === true && yy7c < saveCode[1] + 1 && saveCode[4]!== 31&&saveCode[5]!==31) {
+saveCode[5] =31;    
+saveCode[1] = saveCode[1] - yy7c;
+}
+
+
+saveCode[6] = saveCode[5];
+  
+
+}
+
+
+
+   }
     
    
    
@@ -688,7 +1080,7 @@ bloom = (40);
 shootType = (0);
 rare = (1);
 }
-if (saveCode[6] === 26) {
+if (saveCode[6] === 30) {
 bulletspeed = (20);    
 damage = (2);
 fireRate = (15);
@@ -850,32 +1242,93 @@ rect(x + -77, y + 730, 569,39);
 // guns in store
 
 //gray
-fill(0, 0, 0);
-textSize(15);
-text("Uzi", 200 + -275 + x, 200 + 299 + y);
-text(Uzicost, 204 + -273 + x, 231+ 285 + y);
-noFill();
+if ( x < 269 && y > -331 &&  x > 245 && y < -300) {
+fill(255, 255, 0);
+gy1 = true;
+}
+else {
+gy1 = false;
+noFill();   
+}
 stroke(0, 0, 0);
 rect(187 + -265  + x,186 + 295 + y,32,40);
 
-fill(0, 0, 0);
-textSize(10);
-text("Mus", 196 + -238 +  x, 200 + 295 + y);
-text("ket",196 + -238 + x, 200 + 303 + y ); 
-textSize(15);
-text(musketcost, 231 + -268 + x, 231+ 285 + y);
-noFill();
+if ( x < 268 - 32 && y > -331 &&  x > 269 - 64 && y < -300) {
+fill(255, 255, 0);
+gy2 = true;
+}
+else {
+gy2 = false;
+noFill();   
+}
 stroke(0, 0, 0);
 rect(187 + -232 + x ,186 + 295 + y ,32,40);
+fill(0, 0, 0);
+textSize(12);
+text("1911", 196 + -238 +  x, 203 + 295 + y);
+textSize(15);
+text(gy2c, 231 + -268 + x, 231+ 285 + y);
+noFill();
 
+if ( x < 268 - 64 && y > -331 &&  x > 269 - 96 && y < -300) {
+fill(255, 255, 0);
+gy3 = true;
+}
+else {
+gy3 = false;
+noFill();   
+}
 rect(187 + -198 + x ,186 + 295 + y ,33,40);
 
+if ( x < 268 - 96 && y > -331 &&  x > 269 - 128 && y < -300) {
+fill(255, 255, 0);
+gy4 = true;
+}
+else {
+gy4 = false;
+noFill();   
+}
 rect(187 + -163 + x ,186 + 295 + y ,33,40);
 
+if ( x < 268 - 128 && y > -331 &&  x > 269 - 160 && y < -300) {
+fill(255, 255, 0);
+gy5 = true;
+}
+else {
+gy5 = false;
+noFill();   
+}
 rect(187 + -128 + x ,186 + 295 + y ,33,40);
+fill(0, 0, 0);
+textSize(10);
+text("Mus", 196 + -238 +  x + 34 + 70, 200 + 295 + y);
+text("ket",196 + -238 + x + 34 + 70, 200 + 303 + y ); 
+textSize(15);
+text(gy5c, 231 + -268 + x + 34 + 70, 231+ 285 + y);
+noFill();
 
+if ( x < 268 - 160&& y > -331 &&  x > 269 - 192&& y < -300) {
+fill(255, 255, 0);
+gy6 = true;
+}
+else {
+gy6 = false;
+noFill();   
+}
 rect(187 + -93 + x ,186 + 295 + y ,33,40);
+fill(0, 0, 0);
+textSize(15);
+text("Uzi", 200 + -275 + x+ 34 + 70 + 70, 200 + 299 + y);
+text(gy6c, 204 + -273 + x + 34 + 70 + 68, 231+ 285 + y);
 
+if ( x < 268 - 192 && y > -331 &&  x > 269 - 224&& y < -300) {
+fill(255, 255, 0);
+gy7 = true;
+}
+else {
+gy7 = false;
+noFill();   
+}
 rect(187 + -60 + x ,186 + 295 + y ,33,40);
 
 
@@ -883,86 +1336,363 @@ rect(187 + -60 + x ,186 + 295 + y ,33,40);
 
 //blue
 
-
+if ( x < 269 && y > -331 - 91&&  x > 245 && y < -300 - 91) {
+fill(255, 255, 0);
+bly1 = true;
+}
+else {
+bly1 = false;
+noFill();   
+}
 rect(187 + -265  + x,186 + 295 + y +91,32,40);
 
+if ( x < 268 - 32 && y > -331 - 91&&  x > 269 - 64 && y < -300- 91) {
+fill(255, 255, 0);
+bly2 = true;
+}
+else {
+bly2 = false;
+noFill();   
+}
 rect(187 + -232 + x ,186 + 295 + y +91,32,40);
 
+if ( x < 268 - 64 && y > -331 - 91&&  x > 269 - 96 && y < -300- 91) {
+fill(255, 255, 0);
+bly3 = true;
+}
+else {
+bly3 = false;
+noFill();   
+}
 rect(187 + -198 + x ,186 + 295 + y +91,33,40);
 
+if ( x < 268 - 96 && y > -331 - 91&&  x > 269 - 128 && y < -300- 91) {
+fill(255, 255, 0);
+bly4 = true;
+}
+else {
+bly4 = false;
+noFill();   
+}
 rect(187 + -163 + x ,186 + 295 + y +91,33,40);
 
+if ( x < 268 - 128 && y > -331 - 91&&  x > 269 - 160 && y < -300- 91) {
+fill(255, 255, 0);
+bly5 = true;
+}
+else {
+bly5 = false;
+noFill();   
+}
 rect(187 + -128 + x ,186 + 295 + y +91,33,40);
 
+if ( x < 268 - 160 && y > -331 - 91&&  x > 269 - 192 && y < -300- 91) {
+fill(255, 255, 0);
+bly6 = true;
+}
+else {
+bly6 = false;
+noFill();   
+}
 rect(187 + -93 + x ,186 + 295 + y +91,33,40);
 
+if ( x < 268 - 192 && y > -331 - 91&&  x > 269 - 224 && y < -300- 91) {
+fill(255, 255, 0);
+bly7 = true;
+}
+else {
+bly7 = false;
+noFill();   
+}
 rect(187 + -60 + x ,186 + 295 + y +91,33,40);
 
 //gold
 
-  
+if ( x < 269 && y > -331 - 182&&  x > 245 && y < -300- 182) {
+fill(255, 255, 235);
+yy1 = true;
+}
+else {
+yy1 = false;
+noFill();   
+}
 rect(187 + -265  + x,186 + 295 + y +182,32,40);
  
+if ( x < 268 - 32 && y > -331 - 182&&  x > 269 - 64 && y < -300- 182) {
+fill(255,255,235);
+yy2 = true;
+}
+else {
+yy2 = false;
+noFill();   
+}
 rect(187 + -232 + x ,186 + 295 + y +182,32,40);
  
+if ( x < 268 - 64 && y > -331 - 182&&  x > 269 - 96 && y < -300- 182) {
+fill(255,255,235);
+yy3 = true;
+}
+else {
+yy3 = false;
+noFill();   
+}
 rect(187 + -198 + x ,186 + 295 + y +182,33,40);
  
+if ( x < 268 - 96 && y > -331 - 182&&  x > 269 - 128 && y < -300- 182) {
+fill(255,255,235);
+yy4 = true;
+}
+else {
+yy4 = false;
+noFill();   
+}
 rect(187 + -163 + x ,186 + 295 + y +182,33,40);
  
+if ( x < 268 - 128 && y > -331 - 182&&  x > 269 - 160 && y < -300- 182) {
+fill(255,255,235);
+yy5 = true;
+}
+else {
+yy5 = false;
+noFill();   
+}
 rect(187 + -128 + x ,186 + 295 + y +182,33,40);
  
+if ( x < 268 - 160 && y > -331 - 182&&  x > 269 - 192 && y < -300- 182) {
+fill(255,255,235);
+yy6 = true;
+}
+else {
+yy6 = false;
+noFill();   
+}
 rect(187 + -93 + x ,186 + 295 + y +182,33,40);
  
+if ( x < 268 - 192 && y > -331 - 182&&  x > 269 - 224 && y < -300- 182) {
+fill(255,255,235);
+yy7 = true;
+}
+else {
+yy7 = false;
+noFill();   
+}
 rect(187 + -60 + x ,186 + 295 + y +182,33,40);
  
  
 //green
- 
+
+if ( x < 269 - 330&& y > -331&&  x > 245 - 330&& y < -300) {
+fill(255,255,0);
+gry1 = true;
+}
+else {
+gry1 = false;
+noFill();   
+}
 rect(187 + -265  + x + 330,186 + 295 + y ,32,40);
  
+if ( x < 268 - 32 - 330&& y > -331&&  x > 269 - 64 - 330&& y < -300) {
+fill(255,255,0);
+gry2 = true;
+}
+else {
+gry2 = false;
+noFill();   
+}
 rect(187 + -232 + x + 330 ,186 + 295 + y ,32,40);
  
+if ( x < 268 - 64 - 330&& y > -331&&  x > 269 - 96 - 330&& y < -300) {
+fill(255,255,0);
+gry3 = true;
+}
+else {
+gry3 = false;
+noFill();   
+}
 rect(187 + -198 + x  + 330,186 + 295 + y ,33,40);
  
+if ( x < 268 - 96 - 330&& y > -331&&  x > 269 - 128 - 330&& y < -300) {
+fill(255,255,0);
+gry4 = true;
+}
+else {
+gry4 = false;
+noFill();   
+}
 rect(187 + -163 + x + 330 ,186 + 295 + y ,33,40);
  
+if ( x < 268 - 128 - 330&& y > -331&&  x > 269 - 160 - 330&& y < -300) {
+fill(255,255,0);
+gry5 = true;
+}
+else {
+gry5 = false;
+noFill();   
+}
 rect(187 + -128 + x + 330 ,186 + 295 + y ,33,40);
  
+if ( x < 268 - 160 - 330&& y > -331&&  x > 269 - 192 - 330&& y < -300) {
+fill(255,255,0);
+gry6 = true;
+}
+else {
+gry6 = false;
+noFill();   
+}
 rect(187 + -93 + x  + 330,186 + 295 + y ,33,40);
  
+if ( x < 268 - 192 - 330&& y > -331&&  x > 269 - 224 - 330&& y < -300) {
+fill(255,255,0);
+gry7 = true;
+}
+else {
+gry7 = false;
+noFill();   
+}
 rect(187 + -60 + x  + 330,186 + 295 + y ,33,40);
  
  
 //per
  
- 
+if ( x < 269 - 330&& y > -331 - 91&&  x > 245 - 330&& y < -300- 91) {
+fill(255,255,0);
+py1 = true;
+}
+else {
+py1 = false;
+noFill();   
+}
 rect(187 + -265  + x + 330,186 + 295 + y + 91,32,40);
  
+if ( x < 268 - 32 - 330&& y > -331 - 91&&  x > 269 - 64 - 330&& y < -300- 91) {
+fill(255,255,0);
+py2 = true;
+}
+else {
+py2 = false;
+noFill();   
+}
 rect(187 + -232 + x + 330 ,186 + 295 + y + 91,32,40);
  
+if ( x < 268 - 64 - 330&& y > -331 - 91&&  x > 269 - 96 - 330&& y < -300- 91) {
+fill(255,255,0);
+py3 = true;
+}
+else {
+py3 = false;
+noFill();   
+}
 rect(187 + -198 + x  + 330,186 + 295 + y + 91,33,40);
  
+if ( x < 268 - 96 - 330&& y > -331 - 91&&  x > 269 - 128 - 330&& y < -300- 91) {
+fill(255,255,0);
+py4 = true;
+}
+else {
+py4 = false;
+noFill();   
+}
 rect(187 + -163 + x + 330 ,186 + 295 + y + 91,33,40);
  
+if ( x < 268 - 128 - 330&& y > -331 - 91&&  x > 269 - 160 - 330&& y < -300- 91) {
+fill(255,255,0);
+py5 = true;
+}
+else {
+py5 = false;
+noFill();   
+}
 rect(187 + -128 + x + 330 ,186 + 295 + y + 91,33,40);
  
+if ( x < 268 - 160 - 330&& y > -331 - 91&&  x > 269 - 192 - 330&& y < -300- 91) {
+fill(255,255,0);
+py6 = true;
+}
+else {
+py6 = false;
+noFill();   
+}
 rect(187 + -93 + x  + 330,186 + 295 + y + 91,33,40);
  
+if ( x < 268 - 192 - 330&& y > -331 - 91&&  x > 269 - 224 - 330&& y < -300- 91) {
+fill(255,255,0);
+py7 = true;
+}
+else {
+py7 = false;
+noFill();   
+}
 rect(187 + -60 + x  + 330,186 + 295 + y + 91,33,40);
  
 //red
+if ( x < 269 - 330&& y > -331 - 182&&  x > 245 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry1 = true;
+}
+else {
+ry1 = false;
+noFill();   
+}
 rect(187 + -265  + x + 330,186 + 295 + y + 182,32,40);
- 
+
+if ( x < 268 - 32 - 330&& y > -331 - 182&&  x > 269 - 64 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry2 = true;
+}
+else {
+ry2 = false;
+noFill();   
+}
 rect(187 + -232 + x + 330 ,186 + 295 + y  + 182,32,40);
- 
+
+if ( x < 268 - 64 - 330&& y > -331 - 182&&  x > 269 - 96 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry3 = true;
+}
+else {
+ry3 = false;
+noFill();   
+}
 rect(187 + -198 + x  + 330,186 + 295 + y  + 182,33,40);
  
+if ( x < 268 - 96 - 330&& y > -331 - 182&&  x > 269 - 128 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry4 = true;
+}
+else {
+ry4 = false;
+noFill();   
+}
 rect(187 + -163 + x + 330 ,186 + 295 + y + 182,33,40);
- 
+
+if ( x < 268 - 128 - 330&& y > -331 - 182&&  x > 269 - 160 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry5 = true;
+}
+else {
+ry5 = false;
+noFill();   
+}
 rect(187 + -128 + x + 330 ,186 + 295 + y + 182,33,40);
- 
+
+if ( x < 268 - 160 - 330&& y > -331 - 182&&  x > 269 - 192 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry6 = true;
+}
+else {
+ry6 = false;
+noFill();   
+}
 rect(187 + -93 + x  + 330,186 + 295 + y + 182,33,40);
  
+if ( x < 268 - 192 - 330&& y > -331 - 182&&  x > 269 - 224 - 330&& y < -300- 182) {
+fill(255,255,0);
+ry7 = true;
+}
+else {
+ry7 = false;
+noFill();   
+}
 rect(187 + -60 + x  + 330,186 + 295 + y + 182,33,40);
  
 
@@ -1795,7 +2525,7 @@ fill(255,0,0);
 rect(323,340,5,5);
     
 }
-if (saveCode[6] === 26) {
+if (saveCode[6] === 30) {
 noStroke();
 fill(100,100,100);
 rect(344,357,6,30);
@@ -1889,7 +2619,6 @@ text("uploud",372,48);
 
  };
 }
-
 
     }};
 
