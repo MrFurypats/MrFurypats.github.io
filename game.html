@@ -35,6 +35,12 @@ color: rgb(135, 135, 135);
 
 var saveCodeht = localStorage.getItem("saveCodeinstorage");
 let hello = saveCodeht;   
+if (hello !== null) {
+const htmlsc = hello.split(",");	
+}
+else {
+htmlsc = [0,100,6,6,6,5,0,true,true,0,0];	
+}
 
    
 var askbuttonButton = document.getElementById("askbutton");
