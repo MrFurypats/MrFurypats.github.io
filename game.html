@@ -24,7 +24,9 @@ color: rgb(135, 135, 135);
  <button id="askbutton">save</button>
 <br>
 <br>
-<p class="ver">_______________________________________________________V:57______________________________________________________________________________________________________</p>
+<p> if it is not working paist this into save : 0,0,6,6,2,0,0,true,true,0,0</p>
+<br>
+<p class="ver">_______________________________________________________V:58______________________________________________________________________________________________________</p>
  </body>
  
 
@@ -33,6 +35,14 @@ color: rgb(135, 135, 135);
  <script>
 
 
+var askbuttonButton = document.getElementById("askbutton");
+
+    var askforcode = function() {
+    const saveCode = prompt('paist save code');
+    localStorage.setItem("saveCodeinstorage", saveCode);
+    };
+    askbuttonButton.addEventListener("click", askforcode);
+    
 var saveCodeht = localStorage.getItem("saveCodeinstorage");
 let hello = saveCodeht;   
 const htmlsc = hello.split(",");	
