@@ -8,10 +8,14 @@
     <body>
         
  <ul id="developer-links"> </ul>
+        <button id="btn">put in dev code</button>
         <pid="link-for-dev"> </p>
         <p id="no"> </p>
         <script>
-            var code = gamedevtruev1;
+            
+            
+         function ask() {
+              var code = gamedevtruev1;
         const pw = prompt('what is the dev passcode');
         
             if (pw === code) {
@@ -20,7 +24,13 @@
         else{
           document.getElementById("no").innerHTML = "you are not a dev";    
         }
-        
+             
+         }
+           
+        let btn = document.getElementById("btn");
+    btn.addEventListener('click', event => {
+      ask();
+    });
         </script>
     </body>
 </html>
