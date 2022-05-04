@@ -47,15 +47,6 @@ let hello = saveCodeht;
 const htmlsc = hello.split(",");	
 
    
-var askbuttonButton = document.getElementById("askbutton");
-
-    var askforcode = function() {
-    const saveCode = prompt('Paste save code');
-    localStorage.setItem("saveCodeinstorage", saveCode);
-    };
-    askbuttonButton.addEventListener("click", askforcode);
-    
- 
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
